@@ -92,18 +92,16 @@
 
 
 
-<meta name="description" content="1. line-height有什么作用?line-height: 2和line-height: 200%有什么区别? 设置行高 实现单行文本的垂直居中 line-height详细用法  取值为数字时：行高=子元素字体大小*数字  取值为百分比时：行高=父元素字体大小*百分比  2. 如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？ 查询兼容性网址Can I Use">
+<meta name="description" content="1. 说一说你平时写代码遵守的编码规范 关于命名 语义化标签优先 命名体现功能，不涉及表现样式(颜色、字体、边框、背景等) 所有命名都使用英文小写 命名用引号包裹 用中横线连接   关于html与css 嵌套元素应当缩进一次（即两个空格） 减少标签的数量 为选择器分组时，将单独的选择器单独放在一行。 css的 :后加个空格， {前加个空格 每条声明后都加上分号 换行，而不是放到一行 颜色用小写，用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="line-height &amp; a 标签">
-<meta property="og:url" content="http://yoursite.com/2017/05/08/line-height-a标签/index.html">
+<meta property="og:title" content="CSS规范&amp;垂直居中">
+<meta property="og:url" content="http://yoursite.com/2017/05/09/CSS规范-垂直居中/index.html">
 <meta property="og:site_name" content="Winters&#39;s Blog">
-<meta property="og:description" content="1. line-height有什么作用?line-height: 2和line-height: 200%有什么区别? 设置行高 实现单行文本的垂直居中 line-height详细用法  取值为数字时：行高=子元素字体大小*数字  取值为百分比时：行高=父元素字体大小*百分比  2. 如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？ 查询兼容性网址Can I Use">
-<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=5858a08bab64416d760120d9">
-<meta property="og:updated_time" content="2017-05-09T01:45:07.575Z">
+<meta property="og:description" content="1. 说一说你平时写代码遵守的编码规范 关于命名 语义化标签优先 命名体现功能，不涉及表现样式(颜色、字体、边框、背景等) 所有命名都使用英文小写 命名用引号包裹 用中横线连接   关于html与css 嵌套元素应当缩进一次（即两个空格） 减少标签的数量 为选择器分组时，将单独的选择器单独放在一行。 css的 :后加个空格， {前加个空格 每条声明后都加上分号 换行，而不是放到一行 颜色用小写，用">
+<meta property="og:updated_time" content="2017-05-09T08:34:15.094Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="line-height &amp; a 标签">
-<meta name="twitter:description" content="1. line-height有什么作用?line-height: 2和line-height: 200%有什么区别? 设置行高 实现单行文本的垂直居中 line-height详细用法  取值为数字时：行高=子元素字体大小*数字  取值为百分比时：行高=父元素字体大小*百分比  2. 如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？ 查询兼容性网址Can I Use">
-<meta name="twitter:image" content="https://leanote.com/api/file/getImage?fileId=5858a08bab64416d760120d9">
+<meta name="twitter:title" content="CSS规范&amp;垂直居中">
+<meta name="twitter:description" content="1. 说一说你平时写代码遵守的编码规范 关于命名 语义化标签优先 命名体现功能，不涉及表现样式(颜色、字体、边框、背景等) 所有命名都使用英文小写 命名用引号包裹 用中横线连接   关于html与css 嵌套元素应当缩进一次（即两个空格） 减少标签的数量 为选择器分组时，将单独的选择器单独放在一行。 css的 :后加个空格， {前加个空格 每条声明后都加上分号 换行，而不是放到一行 颜色用小写，用">
 
 
 
@@ -131,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/05/08/line-height-a标签/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/05/09/CSS规范-垂直居中/"/>
 
 
 
 
 
-  <title>line-height & a 标签 | Winters's Blog</title>
+  <title>CSS规范&垂直居中 | Winters's Blog</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -300,7 +298,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/08/line-height-a标签/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/09/CSS规范-垂直居中/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Winters">
@@ -317,7 +315,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">line-height & a 标签</h1>
+          <h1 class="post-title" itemprop="name headline">CSS规范&垂直居中</h1>
         
 
         <div class="post-meta">
@@ -329,8 +327,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-08T19:40:52+08:00">
-                2017-05-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-09T16:32:44+08:00">
+                2017-05-09
               </time>
             
 
@@ -370,9 +368,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/05/08/line-height-a标签/#comments" itemprop="discussionUrl">
+                <a href="/2017/05/09/CSS规范-垂直居中/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/08/line-height-a标签/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/05/09/CSS规范-垂直居中/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -380,7 +378,7 @@
 
           
           
-             <span id="/2017/05/08/line-height-a标签/" class="leancloud_visitors" data-flag-title="line-height & a 标签">
+             <span id="/2017/05/09/CSS规范-垂直居中/" class="leancloud_visitors" data-flag-title="CSS规范&垂直居中">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -408,143 +406,45 @@
       
 
       
-        <h4 id="1-line-height有什么作用-line-height-2和line-height-200-有什么区别"><a href="#1-line-height有什么作用-line-height-2和line-height-200-有什么区别" class="headerlink" title="1. line-height有什么作用?line-height: 2和line-height: 200%有什么区别?"></a>1. line-height有什么作用?line-height: 2和line-height: 200%有什么区别?</h4><ul>
-<li>设置行高</li>
-<li>实现单行文本的垂直居中</li>
-<li><p><a href="http://www.zhangxinxu.com/wordpress/2009/11/css%E8%A1%8C%E9%AB%98line-height%E7%9A%84%E4%B8%80%E4%BA%9B%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E5%8F%8A%E5%BA%94%E7%94%A8/?_t_t_t=0.558901297625001" target="_blank" rel="external">line-height详细用法</a></p>
-</li>
-<li><p>取值为数字时：行高=子元素字体大小*数字</p>
-</li>
-<li>取值为百分比时：行高=父元素字体大小*百分比</li>
+        <h4 id="1-说一说你平时写代码遵守的编码规范"><a href="#1-说一说你平时写代码遵守的编码规范" class="headerlink" title="1. 说一说你平时写代码遵守的编码规范"></a>1. 说一说你平时写代码遵守的编码规范</h4><ol>
+<li>关于命名<ul>
+<li>语义化标签优先</li>
+<li>命名体现功能，不涉及表现样式(颜色、字体、边框、背景等)</li>
+<li>所有命名都使用英文小写</li>
+<li>命名用引号包裹</li>
+<li>用中横线连接</li>
 </ul>
-<h4 id="2-如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？"><a href="#2-如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？" class="headerlink" title="2. 如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？"></a>2. 如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？</h4><ul>
-<li><a href="http://caniuse.com/" target="_blank" rel="external">查询兼容性网址Can I Use</a></li>
-<li><img src="https://leanote.com/api/file/getImage?fileId=5858a08bab64416d760120d9" alt="title"></li>
+</li>
+<li>关于html与css<ul>
+<li>嵌套元素应当缩进一次（即两个空格）</li>
+<li>减少标签的数量</li>
+<li>为选择器分组时，将单独的选择器单独放在一行。</li>
+<li>css的 :后加个空格， {前加个空格</li>
+<li>每条声明后都加上分号</li>
+<li>换行，而不是放到一行</li>
+<li>颜色用小写，用缩写, #fff</li>
+<li>小数不用写前缀, 0.5s -&gt; .5s；0不用加单位</li>
+<li>尽量缩写， margin: 5px 10px 5px 10px -&gt; margin: 5px 10px</li>
 </ul>
-<a id="more"></a>
-<h3 id="3-关于a标签"><a href="#3-关于a标签" class="headerlink" title="3. 关于a标签"></a>3. 关于a标签</h3><ol>
-<li><code>href, title, target</code>是什么？</li>
+</li>
 </ol>
 <ul>
-<li>href：Hypertext Reference，即超文本引用，用于指定超链接目标的URL</li>
+<li><a href="http://codeguide.bootcss.com/" target="_blank" rel="external">遵守编码规范bootstrap</a></li>
 </ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">URL</td>
-<td>超链接的URL。<br>可能的值：<br>绝对URL:指向另一个站点（比如 <code>href=&quot;http://www.example.com/index.html&quot;</code>）<br>相对URL:指向站点内的某个文件（<code>href=&quot;index.html&quot;</code>）<br>锚 URL:指向页面中的锚（<code>href=&quot;#top&quot;</code>）</td>
-</tr>
-</tbody>
-</table>
+<h4 id="2-垂直居中有几种实现方式，给出代码范例"><a href="#2-垂直居中有几种实现方式，给出代码范例" class="headerlink" title="2. 垂直居中有几种实现方式，给出代码范例"></a>2. 垂直居中有几种实现方式，给出代码范例</h4><ol>
+<li>height=line-height实现单行文本垂直居中： <a href="http://js.jirengu.com/limopipovu/3/edit" target="_blank" rel="external">demo</a></li>
+<li>利用padding值相等实现：<a href="http://js.jirengu.com/yuhududupe/3/edit" target="_blank" rel="external">demo</a></li>
+<li><p>绝对定位</p>
 <ul>
-<li>title:标题，成为链接的默认名称。把鼠标悬停链接上面时，会显示title的内容，以达到补充说明或者提示的效果。</li>
+<li>利用负margin <a href="http://js.jirengu.com/topumimani/4/edit" target="_blank" rel="external">demo</a></li>
+<li>利用transform <a href="http://js.jirengu.com/nunaficufi/4/edit" target="_blank" rel="external">demo</a></li>
+<li>利用margin: auto <a href="http://js.jirengu.com/topumimani/10/edit" target="_blank" rel="external">demo</a></li>
 </ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">属性</th>
-<th style="text-align:center">值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">dir</td>
-<td style="text-align:center">rtl/ltr</td>
-<td>规定元素中内容的文本方向</td>
-</tr>
-<tr>
-<td style="text-align:center">lang</td>
-<td style="text-align:center">language_code</td>
-<td>规定元素中内容的语言代码</td>
-</tr>
-<tr>
-<td style="text-align:center">xml:lang</td>
-<td style="text-align:center">language_code</td>
-<td>规定 XHTML 文档中元素内容的语言代码</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>target:规定在何处打开链接文档</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">_blank</td>
-<td>在新窗口中打开被链接文档</td>
-</tr>
-<tr>
-<td style="text-align:center">_self</td>
-<td>默认。在相同的框架中打开被链接文档</td>
-</tr>
-<tr>
-<td style="text-align:center">_parent</td>
-<td>在父框架集中打开被链接文档</td>
-</tr>
-<tr>
-<td style="text-align:center">_top</td>
-<td>在整个窗口中打开被链接文档</td>
-</tr>
-<tr>
-<td style="text-align:center">framename</td>
-<td>在指定的框架中打开被链接文档</td>
-</tr>
-</tbody>
-</table>
-<p>2.title和alt有什么区别？</p>
-<ul>
-<li>使用alt属性是为了给那些不能看到文档中图像的浏览者提供文字说明，是图像无法显示时的替代文本，所以alt是替代图像作用而不是提供额外说明文字的。</li>
-<li>title属性是对元素的注释说明和额外补充，当鼠标放到文字或是图片上时有title文字显示。</li>
-</ul>
-<p>3.如何新窗口打开链接？<br><code>&lt;a href=&quot;http://www.example.com/&quot; target=&quot;_blank&quot;&gt;EXAMPLE&lt;/a&gt;</code></p>
-<h4 id="4-display-none-visibility-hidden-opacity-0-有什么作用？有什么区别？"><a href="#4-display-none-visibility-hidden-opacity-0-有什么作用？有什么区别？" class="headerlink" title="4. display: none , visibility: hidden, opacity:0 有什么作用？有什么区别？"></a>4. display: none , visibility: hidden, opacity:0 有什么作用？有什么区别？</h4><table>
-<thead>
-<tr>
-<th style="text-align:center">方法</th>
-<th>作用描述</th>
-<th style="text-align:center">事件响应</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">display: none</td>
-<td>使元素隐藏；元素空间被占用；导致浏览器重绘及重排</td>
-<td style="text-align:center">不会触发点击事件</td>
-</tr>
-<tr>
-<td style="text-align:center">visibility(能见度): hidden</td>
-<td>使元素隐藏；元素空间不被占用；导致浏览器重绘不重排</td>
-<td style="text-align:center">不会触发点击事件</td>
-</tr>
-<tr>
-<td style="text-align:center">opacity(不透明度):0</td>
-<td>使元素透明度为0，表现为隐藏；元素空间不被占用；不导致浏览器重绘及重绘</td>
-<td style="text-align:center">触发点击事件</td>
-</tr>
-<tr>
-<td style="text-align:center">background-color:rgba(0,0,0,0)</td>
-<td>背景色透明</td>
-<td style="text-align:center">触发点击事件</td>
-</tr>
-</tbody>
-</table>
-<h4 id="5-如何去除-a-链接的默认样式？直接在-a-链接父容器添加颜色，能否继承到当前-a-链接上？"><a href="#5-如何去除-a-链接的默认样式？直接在-a-链接父容器添加颜色，能否继承到当前-a-链接上？" class="headerlink" title="5. 如何去除 a 链接的默认样式？直接在 a 链接父容器添加颜色，能否继承到当前 a 链接上？"></a>5. 如何去除 a 链接的默认样式？直接在 a 链接父容器添加颜色，能否继承到当前 a 链接上？</h4><ul>
-<li>去除a链接的默认样式：<code>a{text-decoration: none;}</code></li>
-<li>不能继承到当前a链接上，需要为其单独设置</li>
-</ul>
+</li>
+<li><p>vertical-align: middle <a href="http://js.jirengu.com/vituziniju/3/edit" target="_blank" rel="external">demo</a></p>
+</li>
+<li>dispaly: table-cell <a href="http://js.jirengu.com/batewikode/6/edit" target="_blank" rel="external">demo</a></li>
+</ol>
 
       
     </div>
@@ -581,8 +481,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/07/CSS基础/" rel="next" title="CSS基础">
-                <i class="fa fa-chevron-left"></i> CSS基础
+              <a href="/2017/05/09/CSS布局/" rel="next" title="浏览器兼容">
+                <i class="fa fa-chevron-left"></i> 浏览器兼容
               </a>
             
           </div>
@@ -590,10 +490,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/08/CSS选择器/" rel="prev" title="CSS选择器">
-                CSS选择器 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -738,7 +634,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-line-height有什么作用-line-height-2和line-height-200-有什么区别"><span class="nav-number">1.</span> <span class="nav-text">1. line-height有什么作用?line-height: 2和line-height: 200%有什么区别?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？"><span class="nav-number">2.</span> <span class="nav-text">2. 如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-关于a标签"><span class="nav-number"></span> <span class="nav-text">3. 关于a标签</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-display-none-visibility-hidden-opacity-0-有什么作用？有什么区别？"><span class="nav-number">1.</span> <span class="nav-text">4. display: none , visibility: hidden, opacity:0 有什么作用？有什么区别？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-如何去除-a-链接的默认样式？直接在-a-链接父容器添加颜色，能否继承到当前-a-链接上？"><span class="nav-number">2.</span> <span class="nav-text">5. 如何去除 a 链接的默认样式？直接在 a 链接父容器添加颜色，能否继承到当前 a 链接上？</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-说一说你平时写代码遵守的编码规范"><span class="nav-number">1.</span> <span class="nav-text">1. 说一说你平时写代码遵守的编码规范</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-垂直居中有几种实现方式，给出代码范例"><span class="nav-number">2.</span> <span class="nav-text">2. 垂直居中有几种实现方式，给出代码范例</span></a></li></ol></div>
             
 
           </div>
@@ -870,9 +766,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/05/08/line-height-a标签/';
-          this.page.identifier = '2017/05/08/line-height-a标签/';
-          this.page.title = 'line-height & a 标签';
+          this.page.url = 'http://yoursite.com/2017/05/09/CSS规范-垂直居中/';
+          this.page.identifier = '2017/05/09/CSS规范-垂直居中/';
+          this.page.title = 'CSS规范&垂直居中';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://.disqus.com/embed.js';
