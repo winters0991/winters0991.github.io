@@ -92,17 +92,17 @@
 
 
 
-<meta name="description" content="1. line-height有什么作用? 设置行高 实现单行文本的垂直居中 line-height详细用法  2. 如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？ 查询兼容性网址Can I Use">
+<meta name="description" content="1. line-height有什么作用?line-height: 2和line-height: 200%有什么区别? 设置行高 实现单行文本的垂直居中 line-height详细用法  取值为数字时：行高=子元素字体大小*数字  取值为百分比时：行高=父元素字体大小*百分比  2. 如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？ 查询兼容性网址Can I Use">
 <meta property="og:type" content="article">
 <meta property="og:title" content="line-height &amp; a 标签">
 <meta property="og:url" content="http://yoursite.com/2017/05/08/line-height-a标签/index.html">
 <meta property="og:site_name" content="Winters&#39;s Blog">
-<meta property="og:description" content="1. line-height有什么作用? 设置行高 实现单行文本的垂直居中 line-height详细用法  2. 如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？ 查询兼容性网址Can I Use">
+<meta property="og:description" content="1. line-height有什么作用?line-height: 2和line-height: 200%有什么区别? 设置行高 实现单行文本的垂直居中 line-height详细用法  取值为数字时：行高=子元素字体大小*数字  取值为百分比时：行高=父元素字体大小*百分比  2. 如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？ 查询兼容性网址Can I Use">
 <meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=5858a08bab64416d760120d9">
-<meta property="og:updated_time" content="2017-05-08T11:50:12.000Z">
+<meta property="og:updated_time" content="2017-05-09T01:45:07.575Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="line-height &amp; a 标签">
-<meta name="twitter:description" content="1. line-height有什么作用? 设置行高 实现单行文本的垂直居中 line-height详细用法  2. 如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？ 查询兼容性网址Can I Use">
+<meta name="twitter:description" content="1. line-height有什么作用?line-height: 2和line-height: 200%有什么区别? 设置行高 实现单行文本的垂直居中 line-height详细用法  取值为数字时：行高=子元素字体大小*数字  取值为百分比时：行高=父元素字体大小*百分比  2. 如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？ 查询兼容性网址Can I Use">
 <meta name="twitter:image" content="https://leanote.com/api/file/getImage?fileId=5858a08bab64416d760120d9">
 
 
@@ -408,10 +408,14 @@
       
 
       
-        <h4 id="1-line-height有什么作用"><a href="#1-line-height有什么作用" class="headerlink" title="1. line-height有什么作用?"></a>1. line-height有什么作用?</h4><ul>
+        <h4 id="1-line-height有什么作用-line-height-2和line-height-200-有什么区别"><a href="#1-line-height有什么作用-line-height-2和line-height-200-有什么区别" class="headerlink" title="1. line-height有什么作用?line-height: 2和line-height: 200%有什么区别?"></a>1. line-height有什么作用?line-height: 2和line-height: 200%有什么区别?</h4><ul>
 <li>设置行高</li>
 <li>实现单行文本的垂直居中</li>
-<li><a href="http://www.zhangxinxu.com/wordpress/2009/11/css%E8%A1%8C%E9%AB%98line-height%E7%9A%84%E4%B8%80%E4%BA%9B%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E5%8F%8A%E5%BA%94%E7%94%A8/?_t_t_t=0.558901297625001" target="_blank" rel="external">line-height详细用法</a></li>
+<li><p><a href="http://www.zhangxinxu.com/wordpress/2009/11/css%E8%A1%8C%E9%AB%98line-height%E7%9A%84%E4%B8%80%E4%BA%9B%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E5%8F%8A%E5%BA%94%E7%94%A8/?_t_t_t=0.558901297625001" target="_blank" rel="external">line-height详细用法</a></p>
+</li>
+<li><p>取值为数字时：行高=子元素字体大小*数字</p>
+</li>
+<li>取值为百分比时：行高=父元素字体大小*百分比</li>
 </ul>
 <h4 id="2-如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？"><a href="#2-如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？" class="headerlink" title="2. 如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？"></a>2. 如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？</h4><ul>
 <li><a href="http://caniuse.com/" target="_blank" rel="external">查询兼容性网址Can I Use</a></li>
@@ -528,6 +532,11 @@
 <tr>
 <td style="text-align:center">opacity(不透明度):0</td>
 <td>使元素透明度为0，表现为隐藏；元素空间不被占用；不导致浏览器重绘及重绘</td>
+<td style="text-align:center">触发点击事件</td>
+</tr>
+<tr>
+<td style="text-align:center">background-color:rgba(0,0,0,0)</td>
+<td>背景色透明</td>
 <td style="text-align:center">触发点击事件</td>
 </tr>
 </tbody>
@@ -663,7 +672,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -729,7 +738,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-line-height有什么作用"><span class="nav-number">1.</span> <span class="nav-text">1. line-height有什么作用?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？"><span class="nav-number">2.</span> <span class="nav-text">2. 如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-关于a标签"><span class="nav-number"></span> <span class="nav-text">3. 关于a标签</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-display-none-visibility-hidden-opacity-0-有什么作用？有什么区别？"><span class="nav-number">1.</span> <span class="nav-text">4. display: none , visibility: hidden, opacity:0 有什么作用？有什么区别？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-如何去除-a-链接的默认样式？直接在-a-链接父容器添加颜色，能否继承到当前-a-链接上？"><span class="nav-number">2.</span> <span class="nav-text">5. 如何去除 a 链接的默认样式？直接在 a 链接父容器添加颜色，能否继承到当前 a 链接上？</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-line-height有什么作用-line-height-2和line-height-200-有什么区别"><span class="nav-number">1.</span> <span class="nav-text">1. line-height有什么作用?line-height: 2和line-height: 200%有什么区别?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？"><span class="nav-number">2.</span> <span class="nav-text">2. 如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-关于a标签"><span class="nav-number"></span> <span class="nav-text">3. 关于a标签</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-display-none-visibility-hidden-opacity-0-有什么作用？有什么区别？"><span class="nav-number">1.</span> <span class="nav-text">4. display: none , visibility: hidden, opacity:0 有什么作用？有什么区别？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-如何去除-a-链接的默认样式？直接在-a-链接父容器添加颜色，能否继承到当前-a-链接上？"><span class="nav-number">2.</span> <span class="nav-text">5. 如何去除 a 链接的默认样式？直接在 a 链接父容器添加颜色，能否继承到当前 a 链接上？</span></a></li></ol></div>
             
 
           </div>
