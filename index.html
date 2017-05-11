@@ -299,6 +299,170 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/11/Math-数组-Date/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Winters">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/image/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Winters's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/11/Math-数组-Date/" itemprop="url">Math&数组&Date</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-11T21:23:19+08:00">
+                2017-05-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript入门/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript入门</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/11/Math-数组-Date/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/05/11/Math-数组-Date/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/05/11/Math-数组-Date/" class="leancloud_visitors" data-flag-title="Math&数组&Date">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h3><h4 id="1-写一个函数，返回从min到max之间的随机整数，包括min不包括max"><a href="#1-写一个函数，返回从min到max之间的随机整数，包括min不包括max" class="headerlink" title="1. 写一个函数，返回从min到max之间的随机整数，包括min不包括max"></a>1. 写一个函数，返回从min到max之间的随机整数，包括min不包括max</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function randomInt(min, max) &#123;</div><div class="line">    return Math.floor(Math.random() * (max - min)) + min;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><em>非作业内容</em> //检测随机数出现频率<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">function randomInt(min,max)&#123;</div><div class="line">//得出每个随机数的次数</div><div class="line">    var MAX = 10000;</div><div class="line">    var obj = &#123;&#125;;</div><div class="line">    for(var i = 0; i &lt; MAX; i++)&#123;</div><div class="line">        var val = Math.floor(Math.random() * (max - min)) + min;</div><div class="line">        if(obj[val] === undefined)&#123;</div><div class="line">            obj[val] = 1;</div><div class="line">        &#125;else&#123;</div><div class="line">            obj[val]++;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">//得出每个随机数的频率</div><div class="line">    for(var key in obj)&#123;</div><div class="line">        obj[key] = obj[key]/MAX</div><div class="line">    &#125;</div><div class="line">console.log(obj);</div></pre></td></tr></table></figure></p>
+<h4 id="2-写一个函数，返回从min都max之间的随机整数，包括min包括max"><a href="#2-写一个函数，返回从min都max之间的随机整数，包括min包括max" class="headerlink" title="2. 写一个函数，返回从min都max之间的随机整数，包括min包括max"></a>2. 写一个函数，返回从min都max之间的随机整数，包括min包括max</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function randomInt(min, max) &#123;</div><div class="line">    return Math.floor(Math.random() * (max - min + 1)) + min;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="3-写一个函数，生成一个长度为-n-的随机字符串，字符串字符的取值范围包括0到9，a到-z，A到Z。"><a href="#3-写一个函数，生成一个长度为-n-的随机字符串，字符串字符的取值范围包括0到9，a到-z，A到Z。" class="headerlink" title="3. 写一个函数，生成一个长度为 n 的随机字符串，字符串字符的取值范围包括0到9，a到 z，A到Z。"></a>3. 写一个函数，生成一个长度为 n 的随机字符串，字符串字符的取值范围包括0到9，a到 z，A到Z。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function getRandStr(len)&#123;</div><div class="line">    var dict = &apos;0123456789abcdefghijkmnlopqrstuvwxyzABCDEFGHIJKMNLOPQRSTUVWXYZ&apos;;</div><div class="line">    var ch, str = &apos;&apos;;</div><div class="line">    for(var i = 0; i &lt; len; i++)&#123;</div><div class="line">        var idx = Math.floor(Math.random() * 62);</div><div class="line">        ch = dict[idx];</div><div class="line">        str += ch;</div><div class="line">    &#125;</div><div class="line">    return str;</div><div class="line">&#125;</div><div class="line">var str = getRandStr(10); // 0a3iJiRZap</div></pre></td></tr></table></figure>
+<h4 id="4-写一个函数，生成一个随机-IP-地址，一个合法的-IP-地址为-0-0-0-0-255-255-255-255"><a href="#4-写一个函数，生成一个随机-IP-地址，一个合法的-IP-地址为-0-0-0-0-255-255-255-255" class="headerlink" title="4. 写一个函数，生成一个随机 IP 地址，一个合法的 IP 地址为 0.0.0.0~255.255.255.255"></a>4. 写一个函数，生成一个随机 IP 地址，一个合法的 IP 地址为 0.0.0.0~255.255.255.255</h4>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/11/Math-数组-Date/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/11/字符串与JSON/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1370,189 +1534,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/09/CSS布局/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Winters">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/image/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Winters's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/09/CSS布局/" itemprop="url">浏览器兼容</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-09T13:01:55+08:00">
-                2017-05-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS入门/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS入门</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/05/09/CSS布局/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/09/CSS布局/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/05/09/CSS布局/" class="leancloud_visitors" data-flag-title="浏览器兼容">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="1-什么是-CSS-hack"><a href="#1-什么是-CSS-hack" class="headerlink" title="1. 什么是 CSS hack"></a>1. 什么是 CSS hack</h4><ul>
-<li>由于不同厂商的浏览器或某浏览器的不同版本（如IE6-IE11/Firefox/Safari/Opera/Chrome等），对CSS的支持、解析不一样，导致在不同浏览器的环境中呈现出不一致的页面展现效果。这时为了获得统一的页面效果，就需要针对不同的浏览器或不同版本写特定的CSS样式，我们把这个针对不同的浏览器或不同版本写相应的CSS code的过程，叫做CSS hack。</li>
-<li>CSS hack大致有3种表现形式，CSS属性前缀法、选择器前缀法以及IE条件注释法（即HTML头部引用if IE）hack，实际项目中CSS hack大部分是针对IE浏览器不同版本之间的表现差异而引入的。</li>
-</ul>
-<h4 id="2-谈一谈浏览器兼容的思路"><a href="#2-谈一谈浏览器兼容的思路" class="headerlink" title="2. 谈一谈浏览器兼容的思路"></a>2. 谈一谈浏览器兼容的思路</h4><ol>
-<li>要不要做？<ul>
-<li>产品的角度（产品的受众、受众的浏览器比例、效果优先还是基本功能优先）</li>
-<li>成本的角度 (有无必要做)</li>
-</ul>
-</li>
-<li>做到什么程度？<ul>
-<li>让哪些浏览器支持哪些效果</li>
-</ul>
-</li>
-<li>如何做？<ul>
-<li>明确效果是要优雅降级还是渐进增强：<br>1.渐进增强(progressive enhancement): 针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。<br>2.优雅降级 (graceful degradation): 一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。</li>
-<li>根据兼容需求选择技术框架/库(jquery)</li>
-<li>根据兼容需求选择兼容工具(html5shiv.js、respond.js、css reset、normalize.css、Modernizr)</li>
-<li>postCSS</li>
-<li>条件注释、CSS Hack、js 能力检测做一些修补</li>
-</ul>
-</li>
-</ol>
-<h4 id="3-列举5种以上浏览器兼容的写法"><a href="#3-列举5种以上浏览器兼容的写法" class="headerlink" title="3. 列举5种以上浏览器兼容的写法"></a>3. 列举5种以上浏览器兼容的写法</h4>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/09/CSS布局/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1602,7 +1583,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
