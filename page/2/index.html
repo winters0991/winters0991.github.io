@@ -299,6 +299,180 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/09/JS基本概念/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Winters">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/image/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Winters's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/09/JS基本概念/" itemprop="url">JS相关概念</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-09T16:47:29+08:00">
+                2017-05-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript入门/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript入门</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/09/JS基本概念/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/05/09/JS基本概念/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/05/09/JS基本概念/" class="leancloud_visitors" data-flag-title="JS相关概念">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="1-CSS和JS在网页中的放置顺序是怎样的？"><a href="#1-CSS和JS在网页中的放置顺序是怎样的？" class="headerlink" title="1. CSS和JS在网页中的放置顺序是怎样的？"></a>1. CSS和JS在网页中的放置顺序是怎样的？</h4><ul>
+<li>一般将css放置head里用style包裹，也可以使用link标签引入。</li>
+<li>js使用script标签引入且一般放置在body闭合标签之前。</li>
+</ul>
+<h4 id="2-解释白屏和FOUC"><a href="#2-解释白屏和FOUC" class="headerlink" title="2. 解释白屏和FOUC"></a>2. 解释白屏和FOUC</h4><p>1.白屏</p>
+<ul>
+<li>如果把样式放在底部，对于IE浏览器，chrome等（CSS全部加载后再呈现,有可能等待时间长），在某些场景下(新窗口打开，刷新等)页面会出现白屏，而不是内容逐步展现。</li>
+<li>使用@import标签，即使CSS放入link, 并且放在头部,也可能出现白屏。</li>
+<li>对于图片和CSS, 在加载时会并发加载(如一个域名下同时加载两个文件)。 但在加载JavaScript时，会禁用并发，并且阻止其他内容的下载。所以把JavaScript放入页面顶部也会导致白屏现象。</li>
+</ul>
+<p>2.FOUC </p>
+<ul>
+<li>Flash of Unstyled Content “无样式内容闪烁“：有些浏览器是边渲染边呈现，CSS放置body标签底部，会出现加载html结束后才一次性加载css样式，从而导致页面闪烁。</li>
+</ul>
+<h4 id="3-async和defer的作用是什么？有什么区别"><a href="#3-async和defer的作用是什么？有什么区别" class="headerlink" title="3. async和defer的作用是什么？有什么区别"></a>3. async和defer的作用是什么？有什么区别</h4>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/09/JS基本概念/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/09/CSS规范-垂直居中/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1396,178 +1570,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/08/line-height-a标签/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Winters">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/image/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Winters's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/08/line-height-a标签/" itemprop="url">line-height & a 标签</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-08T19:40:52+08:00">
-                2017-05-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS入门/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS入门</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/05/08/line-height-a标签/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/08/line-height-a标签/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/05/08/line-height-a标签/" class="leancloud_visitors" data-flag-title="line-height & a 标签">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="1-line-height有什么作用-line-height-2和line-height-200-有什么区别"><a href="#1-line-height有什么作用-line-height-2和line-height-200-有什么区别" class="headerlink" title="1. line-height有什么作用?line-height: 2和line-height: 200%有什么区别?"></a>1. line-height有什么作用?line-height: 2和line-height: 200%有什么区别?</h4><ul>
-<li>设置行高</li>
-<li>实现单行文本的垂直居中</li>
-<li><p><a href="http://www.zhangxinxu.com/wordpress/2009/11/css%E8%A1%8C%E9%AB%98line-height%E7%9A%84%E4%B8%80%E4%BA%9B%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E5%8F%8A%E5%BA%94%E7%94%A8/?_t_t_t=0.558901297625001" target="_blank" rel="external">line-height详细用法</a></p>
-</li>
-<li><p>取值为数字时：行高=子元素字体大小*数字</p>
-</li>
-<li>取值为百分比时：行高=父元素字体大小*百分比</li>
-</ul>
-<h4 id="2-如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？"><a href="#2-如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？" class="headerlink" title="2. 如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？"></a>2. 如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？</h4><ul>
-<li><a href="http://caniuse.com/" target="_blank" rel="external">查询兼容性网址Can I Use</a></li>
-<li><img src="https://leanote.com/api/file/getImage?fileId=5858a08bab64416d760120d9" alt="title"></li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/08/line-height-a标签/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1617,7 +1619,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
