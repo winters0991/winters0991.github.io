@@ -92,20 +92,16 @@
 
 
 
-<meta name="description" content="1. 盒模型包括哪些属性 content(内容) padding(内边距) border(边框) margin(外边距)   2. text-align: center的作用是什么，作用在什么元素上？能让什么元素水平居中 作用于块级元素，可以使块级元素中的inline、inline-block及文本水平居中   3. IE盒模型和W3C盒模型有什么区别? IE盒模型(怪异模式)：width=con">
+<meta name="description" content="1. DOM0 事件和DOM2级在事件监听使用方式上有什么区别？ DOM0：把一个方法赋值给一个元素的事件处理程序属性，这样处理，事件处理程序被认为是元素的方法，事件处理程序在元素的作用域下运行，this就是当前元素。这样的缺陷是：同一个事件只能有一个事件监听函数，再次添加会产生覆盖。 1234var btnClick = document.getElementById(&amp;apos;btnClic">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS常见样式2">
-<meta property="og:url" content="http://yoursite.com/2017/05/09/CSS常见样式2/index.html">
+<meta property="og:title" content="事件">
+<meta property="og:url" content="http://yoursite.com/2017/05/12/事件/index.html">
 <meta property="og:site_name" content="Winters&#39;s Blog">
-<meta property="og:description" content="1. 盒模型包括哪些属性 content(内容) padding(内边距) border(边框) margin(外边距)   2. text-align: center的作用是什么，作用在什么元素上？能让什么元素水平居中 作用于块级元素，可以使块级元素中的inline、inline-block及文本水平居中   3. IE盒模型和W3C盒模型有什么区别? IE盒模型(怪异模式)：width=con">
-<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=58690b4dab64415e430046b7">
-<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=58690b5aab644160be0048c4">
-<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=58690b6bab644160be0048c5">
-<meta property="og:updated_time" content="2017-05-09T01:48:58.711Z">
+<meta property="og:description" content="1. DOM0 事件和DOM2级在事件监听使用方式上有什么区别？ DOM0：把一个方法赋值给一个元素的事件处理程序属性，这样处理，事件处理程序被认为是元素的方法，事件处理程序在元素的作用域下运行，this就是当前元素。这样的缺陷是：同一个事件只能有一个事件监听函数，再次添加会产生覆盖。 1234var btnClick = document.getElementById(&amp;apos;btnClic">
+<meta property="og:updated_time" content="2017-05-12T14:40:13.352Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS常见样式2">
-<meta name="twitter:description" content="1. 盒模型包括哪些属性 content(内容) padding(内边距) border(边框) margin(外边距)   2. text-align: center的作用是什么，作用在什么元素上？能让什么元素水平居中 作用于块级元素，可以使块级元素中的inline、inline-block及文本水平居中   3. IE盒模型和W3C盒模型有什么区别? IE盒模型(怪异模式)：width=con">
-<meta name="twitter:image" content="https://leanote.com/api/file/getImage?fileId=58690b4dab64415e430046b7">
+<meta name="twitter:title" content="事件">
+<meta name="twitter:description" content="1. DOM0 事件和DOM2级在事件监听使用方式上有什么区别？ DOM0：把一个方法赋值给一个元素的事件处理程序属性，这样处理，事件处理程序被认为是元素的方法，事件处理程序在元素的作用域下运行，this就是当前元素。这样的缺陷是：同一个事件只能有一个事件监听函数，再次添加会产生覆盖。 1234var btnClick = document.getElementById(&amp;apos;btnClic">
 
 
 
@@ -133,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/05/09/CSS常见样式2/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/05/12/事件/"/>
 
 
 
 
 
-  <title>CSS常见样式2 | Winters's Blog</title>
+  <title>事件 | Winters's Blog</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -302,7 +298,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/09/CSS常见样式2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/12/事件/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Winters">
@@ -319,7 +315,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CSS常见样式2</h1>
+          <h1 class="post-title" itemprop="name headline">事件</h1>
         
 
         <div class="post-meta">
@@ -331,8 +327,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-09T09:40:57+08:00">
-                2017-05-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-12T22:33:55+08:00">
+                2017-05-12
               </time>
             
 
@@ -354,8 +350,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS入门/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS入门</span>
+                  <a href="/categories/JavaScript入门/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript入门</span>
                   </a>
                 </span>
 
@@ -372,9 +368,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/05/09/CSS常见样式2/#comments" itemprop="discussionUrl">
+                <a href="/2017/05/12/事件/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/09/CSS常见样式2/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/05/12/事件/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -382,7 +378,7 @@
 
           
           
-             <span id="/2017/05/09/CSS常见样式2/" class="leancloud_visitors" data-flag-title="CSS常见样式2">
+             <span id="/2017/05/12/事件/" class="leancloud_visitors" data-flag-title="事件">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -410,60 +406,47 @@
       
 
       
-        <h4 id="1-盒模型包括哪些属性"><a href="#1-盒模型包括哪些属性" class="headerlink" title="1. 盒模型包括哪些属性"></a>1. 盒模型包括哪些属性</h4><ul>
-<li>content(内容)</li>
-<li>padding(内边距)</li>
-<li>border(边框)</li>
-<li>margin(外边距)<br><img src="https://leanote.com/api/file/getImage?fileId=58690b4dab64415e430046b7" alt="title"></li>
-</ul>
-<hr>
-<h4 id="2-text-align-center的作用是什么，作用在什么元素上？能让什么元素水平居中"><a href="#2-text-align-center的作用是什么，作用在什么元素上？能让什么元素水平居中" class="headerlink" title="2. text-align: center的作用是什么，作用在什么元素上？能让什么元素水平居中"></a>2. text-align: center的作用是什么，作用在什么元素上？能让什么元素水平居中</h4><ul>
-<li>作用于块级元素，可以使块级元素中的inline、inline-block及文本水平居中</li>
-</ul>
-<hr>
-<h4 id="3-IE盒模型和W3C盒模型有什么区别"><a href="#3-IE盒模型和W3C盒模型有什么区别" class="headerlink" title="3. IE盒模型和W3C盒模型有什么区别?"></a>3. IE盒模型和W3C盒模型有什么区别?</h4><ul>
-<li>IE盒模型(怪异模式)：width=content+padding+border</li>
-<li>W3C标准盒模型：width=content</li>
-<li>IE678版本在不添加doctype时为怪异模式，添加doctype变成标准模式</li>
-<li>使用box-sizing:border-box进行盒模型模式切换<br><img src="https://leanote.com/api/file/getImage?fileId=58690b5aab644160be0048c4" alt="title"></li>
-</ul>
-<a id="more"></a>
-<hr>
-<h4 id="4-以下代码的作用？兼容性？"><a href="#4-以下代码的作用？兼容性？" class="headerlink" title="4. 以下代码的作用？兼容性？"></a>4. 以下代码的作用？兼容性？</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">*&#123;</div><div class="line">  box-sizing: border-box;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>盒模型切换为怪异模式，即width=content+padding+border</li>
-<li>兼容性<br><img src="https://leanote.com/api/file/getImage?fileId=58690b6bab644160be0048c5" alt="title"></li>
-</ul>
-<hr>
-<h4 id="5-inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐"><a href="#5-inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐" class="headerlink" title="5. inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐?"></a>5. inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐?</h4><ul>
-<li>内联块：将对象呈递为内联元素，但是对象的内容作为块级元素呈递。旁边的内联元素会被呈递在同一行内，允许空格。即同时具有内联元素和块级元素的特性。</li>
-<li>去除缝隙的方法：<br>1.移除标签段之间的空格<br>2.使用margin负值<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.space a &#123;</div><div class="line">    display: inline-block;</div><div class="line">    margin-right: -3px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <h4 id="1-DOM0-事件和DOM2级在事件监听使用方式上有什么区别？"><a href="#1-DOM0-事件和DOM2级在事件监听使用方式上有什么区别？" class="headerlink" title="1. DOM0 事件和DOM2级在事件监听使用方式上有什么区别？"></a>1. DOM0 事件和DOM2级在事件监听使用方式上有什么区别？</h4><ul>
+<li><p>DOM0：把一个方法赋值给一个元素的事件处理程序属性，这样处理，事件处理程序被认为是元素的方法，事件处理程序在元素的作用域下运行，this就是当前元素。这样的缺陷是：同一个事件只能有一个事件监听函数，再次添加会产生覆盖。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var btnClick = document.getElementById(&apos;btnClick&apos;);</div><div class="line">btnClick.onclick = function handler() &#123;</div><div class="line">    alert(this.id);</div><div class="line">&#125;; //bthClick</div></pre></td></tr></table></figure>
+</li>
+<li><p>DOM2：这种方式可以给一个同一个元素添加多个处理事件，同时它的this也指向元素本身。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var btnClick = document.getElementById(&apos;btnClick&apos;);</div><div class="line">btnClick.addEventListener(&apos;click&apos;, function() &#123;</div><div class="line">    alert(this.id);</div><div class="line">&#125;, false); //btnClick</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>3.删除闭合标签<br>4.使用font-size:0<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.space &#123;</div><div class="line">    font-size: 0;</div><div class="line">&#125;</div><div class="line">.space a &#123;</div><div class="line">    font-size: 12px;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>5.使用letter-spacing<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.space &#123;</div><div class="line">    letter-spacing: -3px;</div><div class="line">&#125;</div><div class="line">.space a &#123;</div><div class="line">    letter-spacing: 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>6.使用word-spacing<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.space &#123;</div><div class="line">    word-spacing: -6px;</div><div class="line">&#125;</div><div class="line">.space a &#123;</div><div class="line">    word-spacing: 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="2-attachEvent与addEventListener的区别？"><a href="#2-attachEvent与addEventListener的区别？" class="headerlink" title="2. attachEvent与addEventListener的区别？"></a>2. attachEvent与addEventListener的区别？</h4><ul>
+<li><strong>适用浏览器不同</strong>：attachEvent是IE的事件处理方法，addEventListener是标准浏览器的处理方式。</li>
+<li><strong>参数个数不相同</strong>：addEventListener有三个参数，attachEvent只有两个，attachEvent添加的事件处理程序只能发生在冒泡阶段，addEventListener第三个参数可以决定添加的事件处理程序是在捕获阶段还是冒泡阶段处理。</li>
+<li><strong>第一个参数意义不同</strong>：addEventListener第一个参数是事件类型（比如click，load），而attachEvent第一个参数指明的是事件处理函数名称（onclick，onload）。</li>
+<li><strong>事件处理程序的作用域不相同</strong>：addEventListener的作用域是元素本身，this是指的触发元素，而attachEvent事件处理程序会在全局变量内运行，this是window。</li>
+<li><strong>为一个事件添加多个事件处理程序时，执行顺序不同</strong>：addEventListener添加会按照添加顺序执行，而attachEvent添加多个事件处理程序时顺序无规律。</li>
+</ul>
+<h4 id="3-解释IE事件冒泡和DOM2事件传播机制？"><a href="#3-解释IE事件冒泡和DOM2事件传播机制？" class="headerlink" title="3. 解释IE事件冒泡和DOM2事件传播机制？"></a>3. 解释IE事件冒泡和DOM2事件传播机制？</h4><ul>
+<li><p>IE的事件冒泡：事件开始时由最具体的元素接收，然后逐级向上传播到较为不具体的元素。</p>
+</li>
+<li><p>DOM2：DOM2级事件规定事件流包括三个阶段，事件捕获阶段，处于目标阶段，事件冒泡阶段，首先发生的是事件捕获，为截取事件提供机会，然后是实际目标接收事件，最后是冒泡阶段。</p>
+</li>
+</ul>
+<h4 id="4-如何阻止事件冒泡？-如何阻止默认事件？"><a href="#4-如何阻止事件冒泡？-如何阻止默认事件？" class="headerlink" title="4. 如何阻止事件冒泡？ 如何阻止默认事件？"></a>4. 如何阻止事件冒泡？ 如何阻止默认事件？</h4><a id="more"></a>
 <ul>
-<li>顶端对齐：vertical-align:top;</li>
+<li>DOM浏览器：<ul>
+<li>阻止事件冒泡：stopPropagation()</li>
+<li>阻止默认事件：preventDefault()</li>
 </ul>
-<h4 id="6-CSS-sprite-是什么"><a href="#6-CSS-sprite-是什么" class="headerlink" title="6. CSS sprite 是什么?"></a>6. CSS sprite 是什么?</h4><ul>
-<li>CSS sprite 即精灵图，雪碧图。是一种网页图片应用处理方式。它可以将一个页面涉及到的所有零星图片都包含到一张大图中去，这样一来，当访问该页面时，载入的图片就不会像以前那样一幅一幅地慢慢显示出来了。</li>
-<li>优点</li>
+</li>
+<li>IE浏览器：<ul>
+<li>阻止事件冒泡：cancelBubble 默认为false，设置为true后可以取消事件冒泡</li>
+<li>阻止默认事件：returnValue 默认为true，设为false可以取消事件默认行为</li>
 </ul>
-<ol>
-<li>利用CSS Sprites能很好地减少网页的http请求，从而大大的提高页面的性能。</li>
-<li>CSS Sprites能减少图片的字节。</li>
-<li>解决了网页设计师在图片命名上的困扰，只需对一张集合的图片上命名就可以了，不需要对每一个小元素进行命名，从而提高了网页的制作效率。</li>
-<li>更换风格方便，只需要在一张或少张图片上修改图片的颜色或样式，整个网页的风格就可以改变，维护起来更加方便。</li>
-</ol>
-<ul>
-<li>缺点</li>
+</li>
 </ul>
-<ol>
-<li>在图片合并的时候，需要把多张图片有序的合理的合并成一张图片，还要留好足够的空间，防止板块内出现不必要的背景；若是在宽屏，高分辨率的屏幕下的自适应页面，图片如果不够宽，很容易出现背景断裂。</li>
-<li>CSS Sprites在开发的时候比较麻烦。</li>
-<li>CSS Sprites在维护的时候比较麻烦，如果页面背景有少许改动，一般就要改这张合并的图片。</li>
-</ol>
+<h4 id="5-有如下代码，要求当点击每一个元素li时控制台展示该元素的文本内容。不考虑兼容。"><a href="#5-有如下代码，要求当点击每一个元素li时控制台展示该元素的文本内容。不考虑兼容。" class="headerlink" title="5. 有如下代码，要求当点击每一个元素li时控制台展示该元素的文本内容。不考虑兼容。"></a>5. 有如下代码，要求当点击每一个元素li时控制台展示该元素的文本内容。不考虑兼容。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;ul class=&quot;ct&quot;&gt;</div><div class="line">    &lt;li&gt;这里是&lt;/li&gt;</div><div class="line">    &lt;li&gt;饥人谷&lt;/li&gt;</div><div class="line">    &lt;li&gt;前端6班&lt;/li&gt;</div><div class="line">&lt;/ul&gt;</div><div class="line">&lt;script&gt;</div><div class="line">var lis = document.querySelectorAll(&apos;.ct li&apos;);</div><div class="line">for(var i = 0; i &lt; lis.length; i++)&#123;</div><div class="line">    lis[i].addEventListener(&apos;click&apos;, function()&#123;</div><div class="line">        console.log(this.innerText);</div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h4 id="6-补全代码，要求："><a href="#6-补全代码，要求：" class="headerlink" title="6. 补全代码，要求："></a>6. 补全代码，要求：</h4><ul>
+<li>当点击按钮开头添加时在</li><li>这里是</li>元素前添加一个新元素，内容为用户输入的非空字符串；当点击结尾添加时在最后一个 li 元素后添加用户输入的非空字符串.
+<li>当点击每一个元素li时控制台展示该元素的文本内容。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">&lt;ul class=&quot;ct&quot;&gt;</div><div class="line">    &lt;li&gt;这里是&lt;/li&gt;</div><div class="line">    &lt;li&gt;饥人谷&lt;/li&gt;</div><div class="line">    &lt;li&gt;任务班&lt;/li&gt;</div><div class="line">&lt;/ul&gt;</div><div class="line">&lt;input class=&quot;ipt-add-content&quot; placeholder=&quot;添加内容&quot;/&gt;</div><div class="line">&lt;button id=&quot;btn-add-start&quot;&gt;开头添加&lt;/button&gt;</div><div class="line">&lt;button id=&quot;btn-add-end&quot;&gt;结尾添加&lt;/button&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    var ipt = $(&apos;.ipt-add-content&apos;);  </div><div class="line">    var addStart = $(&apos;#btn-add-start&apos;);</div><div class="line">    var endStart = $(&apos;#btn-add-end&apos;);</div><div class="line">    var ct = $(&apos;.ct&apos;);</div><div class="line"></div><div class="line">    ct.addEventListener(&apos;click&apos;, function(e)&#123;</div><div class="line">        console.log(e.target.innerText);                      </div><div class="line">    &#125;)</div><div class="line">    addStart.addEventListener(&apos;click&apos;, function()&#123;</div><div class="line">			var li = document.createElement(&apos;li&apos;);</div><div class="line">			li.innerText = ipt.value;</div><div class="line">			ct.insertBefore(li, ct.firstChild);</div><div class="line">    &#125;)        </div><div class="line">    endStart.addEventListener(&apos;click&apos;, function()&#123;</div><div class="line">			var li = document.createElement(&apos;li&apos;);</div><div class="line">			li.innerText = ipt.value;</div><div class="line">			ct.appendChild(li);</div><div class="line">    &#125;)     </div><div class="line">    function $(id)&#123;</div><div class="line">			return document.querySelector(id);</div><div class="line">    &#125;</div><div class="line">    function $$(clas)&#123;</div><div class="line">			return document.querySelectorAll(clas);</div><div class="line">    &#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="7-补全代码，要求：当鼠标放置在li元素上，会在img-preview里展示当前li元素的data-img对应的图片。"><a href="#7-补全代码，要求：当鼠标放置在li元素上，会在img-preview里展示当前li元素的data-img对应的图片。" class="headerlink" title="7. 补全代码，要求：当鼠标放置在li元素上，会在img-preview里展示当前li元素的data-img对应的图片。"></a>7. 补全代码，要求：当鼠标放置在li元素上，会在img-preview里展示当前li元素的data-img对应的图片。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">&lt;ul class=&quot;ct&quot;&gt;</div><div class="line">    &lt;li data-img=&quot;1.png&quot;&gt;鼠标放置查看图片1&lt;/li&gt;</div><div class="line">    &lt;li data-img=&quot;2.png&quot;&gt;鼠标放置查看图片2&lt;/li&gt;</div><div class="line">    &lt;li data-img=&quot;3.png&quot;&gt;鼠标放置查看图片3&lt;/li&gt;</div><div class="line">&lt;/ul&gt;</div><div class="line">&lt;div class=&quot;img-preview&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">var preview = document.querySelector(&apos;.img-preview&apos;);</div><div class="line">var ct = document.querySelector(&apos;.ct&apos;);</div><div class="line">ct.addEventListener(&apos;mouseover&apos;, function(e)&#123;</div><div class="line">  if(e.target.tagName.toLowerCase() === &apos;li&apos;)&#123;</div><div class="line">  var img = document.createElement(&apos;img&apos;);</div><div class="line">  img.src = e.target.getAttribute(&apos;data-img&apos;);</div><div class="line">  preview.appendChild(img); </div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line">ct.addEventListener(&apos;mouseout&apos;, function(e)&#123;</div><div class="line">  if(e.target.tagName.toLowerCase() === &apos;li&apos;)&#123;</div><div class="line">  preview.innerHTML = &apos;&apos;;</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -500,8 +483,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/08/CSS常见样式/" rel="next" title="CSS常见样式">
-                <i class="fa fa-chevron-left"></i> CSS常见样式
+              <a href="/2017/05/12/DOM操作/" rel="next" title="DOM操作">
+                <i class="fa fa-chevron-left"></i> DOM操作
               </a>
             
           </div>
@@ -509,10 +492,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/09/浮动定位-BFC-边距合并/" rel="prev" title="浮动定位&BFC&边距合并">
-                浮动定位&BFC&边距合并 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -657,7 +636,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-盒模型包括哪些属性"><span class="nav-number">1.</span> <span class="nav-text">1. 盒模型包括哪些属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-text-align-center的作用是什么，作用在什么元素上？能让什么元素水平居中"><span class="nav-number">2.</span> <span class="nav-text">2. text-align: center的作用是什么，作用在什么元素上？能让什么元素水平居中</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-IE盒模型和W3C盒模型有什么区别"><span class="nav-number">3.</span> <span class="nav-text">3. IE盒模型和W3C盒模型有什么区别?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-以下代码的作用？兼容性？"><span class="nav-number">4.</span> <span class="nav-text">4. 以下代码的作用？兼容性？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐"><span class="nav-number">5.</span> <span class="nav-text">5. inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-CSS-sprite-是什么"><span class="nav-number">6.</span> <span class="nav-text">6. CSS sprite 是什么?</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-DOM0-事件和DOM2级在事件监听使用方式上有什么区别？"><span class="nav-number">1.</span> <span class="nav-text">1. DOM0 事件和DOM2级在事件监听使用方式上有什么区别？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-attachEvent与addEventListener的区别？"><span class="nav-number">2.</span> <span class="nav-text">2. attachEvent与addEventListener的区别？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-解释IE事件冒泡和DOM2事件传播机制？"><span class="nav-number">3.</span> <span class="nav-text">3. 解释IE事件冒泡和DOM2事件传播机制？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-如何阻止事件冒泡？-如何阻止默认事件？"><span class="nav-number">4.</span> <span class="nav-text">4. 如何阻止事件冒泡？ 如何阻止默认事件？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-有如下代码，要求当点击每一个元素li时控制台展示该元素的文本内容。不考虑兼容。"><span class="nav-number">5.</span> <span class="nav-text">5. 有如下代码，要求当点击每一个元素li时控制台展示该元素的文本内容。不考虑兼容。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-补全代码，要求："><span class="nav-number">6.</span> <span class="nav-text">6. 补全代码，要求：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-补全代码，要求：当鼠标放置在li元素上，会在img-preview里展示当前li元素的data-img对应的图片。"><span class="nav-number">7.</span> <span class="nav-text">7. 补全代码，要求：当鼠标放置在li元素上，会在img-preview里展示当前li元素的data-img对应的图片。</span></a></li></ol></div>
             
 
           </div>
@@ -789,9 +768,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/05/09/CSS常见样式2/';
-          this.page.identifier = '2017/05/09/CSS常见样式2/';
-          this.page.title = 'CSS常见样式2';
+          this.page.url = 'http://yoursite.com/2017/05/12/事件/';
+          this.page.identifier = '2017/05/12/事件/';
+          this.page.title = '事件';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://.disqus.com/embed.js';
