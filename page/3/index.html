@@ -299,6 +299,189 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/09/CSS布局/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Winters">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/image/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Winters's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/09/CSS布局/" itemprop="url">浏览器兼容</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-09T13:01:55+08:00">
+                2017-05-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS入门/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS入门</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/09/CSS布局/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/05/09/CSS布局/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/05/09/CSS布局/" class="leancloud_visitors" data-flag-title="浏览器兼容">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="1-什么是-CSS-hack"><a href="#1-什么是-CSS-hack" class="headerlink" title="1. 什么是 CSS hack"></a>1. 什么是 CSS hack</h4><ul>
+<li>由于不同厂商的浏览器或某浏览器的不同版本（如IE6-IE11/Firefox/Safari/Opera/Chrome等），对CSS的支持、解析不一样，导致在不同浏览器的环境中呈现出不一致的页面展现效果。这时为了获得统一的页面效果，就需要针对不同的浏览器或不同版本写特定的CSS样式，我们把这个针对不同的浏览器或不同版本写相应的CSS code的过程，叫做CSS hack。</li>
+<li>CSS hack大致有3种表现形式，CSS属性前缀法、选择器前缀法以及IE条件注释法（即HTML头部引用if IE）hack，实际项目中CSS hack大部分是针对IE浏览器不同版本之间的表现差异而引入的。</li>
+</ul>
+<h4 id="2-谈一谈浏览器兼容的思路"><a href="#2-谈一谈浏览器兼容的思路" class="headerlink" title="2. 谈一谈浏览器兼容的思路"></a>2. 谈一谈浏览器兼容的思路</h4><ol>
+<li>要不要做？<ul>
+<li>产品的角度（产品的受众、受众的浏览器比例、效果优先还是基本功能优先）</li>
+<li>成本的角度 (有无必要做)</li>
+</ul>
+</li>
+<li>做到什么程度？<ul>
+<li>让哪些浏览器支持哪些效果</li>
+</ul>
+</li>
+<li>如何做？<ul>
+<li>明确效果是要优雅降级还是渐进增强：<br>1.渐进增强(progressive enhancement): 针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。<br>2.优雅降级 (graceful degradation): 一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。</li>
+<li>根据兼容需求选择技术框架/库(jquery)</li>
+<li>根据兼容需求选择兼容工具(html5shiv.js、respond.js、css reset、normalize.css、Modernizr)</li>
+<li>postCSS</li>
+<li>条件注释、CSS Hack、js 能力检测做一些修补</li>
+</ul>
+</li>
+</ol>
+<h4 id="3-列举5种以上浏览器兼容的写法"><a href="#3-列举5种以上浏览器兼容的写法" class="headerlink" title="3. 列举5种以上浏览器兼容的写法"></a>3. 列举5种以上浏览器兼容的写法</h4>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/09/CSS布局/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/09/浮动定位-BFC-边距合并/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1363,176 +1546,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/07/Form表单/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Winters">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/image/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Winters's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/07/Form表单/" itemprop="url">Form表单</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-07T16:17:49+08:00">
-                2017-05-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HTML入门/" itemprop="url" rel="index">
-                    <span itemprop="name">HTML入门</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/05/07/Form表单/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/07/Form表单/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/05/07/Form表单/" class="leancloud_visitors" data-flag-title="Form表单">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="1-form表单有什么作用？有哪些常用的input标签，分别有什么作用？"><a href="#1-form表单有什么作用？有哪些常用的input标签，分别有什么作用？" class="headerlink" title="1. form表单有什么作用？有哪些常用的input标签，分别有什么作用？"></a>1. form表单有什么作用？有哪些常用的input标签，分别有什么作用？</h4><ul>
-<li>表单的作用是搜集用户的输入，用户提交表单时向服务器传输数据，从而实现用户与web服务器的交互。</li>
-<li>常用的input标签：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;input type=&quot;text&quot;&gt;:定义用于文本输入的单行输入字段（默认宽度为20个字符）</div><div class="line">&lt;input type=&quot;password&quot;&gt;:定义密码字段</div><div class="line">&lt;input type=&quot;radio&quot;&gt;:定义单选按钮，允许用户在有限数量的选项中选择一个</div><div class="line">&lt;input type=&quot;checkbox&quot;&gt;:定义复选框</div><div class="line">&lt;input type=&quot;submit&quot;&gt;:定义用于向表单处理程序提交表单的按钮。</div><div class="line">&lt;input type=&quot;button&quot;&gt;:定义按钮</div><div class="line">&lt;input type=&quot;number&quot;&gt;:用于应该包含数字值的输入字段</div><div class="line">&lt;input type=&quot;date&quot;&gt;:用于应该包含日期的输入字段</div><div class="line">&lt;input type=&quot;color&quot;&gt;:用于应该包含颜色的输入字段，根据浏览器支持，颜色选择器会出现输入字段中。</div><div class="line">&lt;input type=&quot;range&quot;&gt;:用于应该包含一定范围内的值的输入字段，根据浏览器支持，输入字段能够显示为滑动控件</div><div class="line">&lt;input type=&quot;month&quot;&gt;:允许用户选择月份和年份，根据浏览器的支持，日期选择器会出现在输入字段中</div><div class="line">&lt;input type=&quot;week&quot;&gt;:允许用户选择周和年,根据浏览器支持，日期选择器会出现输入字段中。</div><div class="line">&lt;input type=&quot;time&quot;&gt;:允许用户选择时间（无时区）,根据浏览器支持，时间选择器会出现输入字段中。</div><div class="line">&lt;input type=&quot;datetime&quot;&gt;:允许用户选择日期和时间（有时区）,根据浏览器支持，日期选择器会出现输入字段中。</div><div class="line">&lt;input type=&quot;datetime-local&quot;&gt;:允许用户选择日期和时间（无时区）,根据浏览器支持，日期选择器会出现输入字段中。</div><div class="line">&lt;input type=&quot;email&quot;&gt;:用于应该包含电子邮件地址的输入字段，根据浏览器支持，能够在被提交时自动对电子邮件地址进行验证。</div><div class="line">&lt;input type=&quot;search&quot;&gt;:用于搜索字段（搜索字段的表现类似常规文本字段）。</div><div class="line">&lt;input type=&quot;tel&quot;&gt;:用于应该包含电话号码的输入字段，目前只有Safari 8支持该类型</div><div class="line">&lt;input type=&quot;url&quot;&gt;:用于应该包含URL地址的输入字段，根据浏览器的支持，在提交时能够自动验证url字段。</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="2-post和get方式有什么区别"><a href="#2-post和get方式有什么区别" class="headerlink" title="2. post和get方式有什么区别"></a>2. post和get方式有什么区别</h4><ul>
-<li>get适用于非敏感数据的提交，post适用于敏感数据的提交</li>
-<li>当使用get方法时，表单数据在页面地址栏中是可见的；当使用post方法时，表单数据在页面地址栏中是不可见的。</li>
-<li>get适用于数据的查询和获取，post适用于数据的增加删除和修改</li>
-<li>get方法提交的数据最多只能是1024字节，理论上post没有限制，可传较大量的数据，IIS4中最大为80KB，IIS5中为100KB</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/07/Form表单/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1582,7 +1595,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-count">23</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

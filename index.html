@@ -299,6 +299,192 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/13/jQuery选择器-Dom操作-样式-事件处理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Winters">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/image/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Winters's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/13/jQuery选择器-Dom操作-样式-事件处理/" itemprop="url">jQuery选择器&Dom操作&样式&事件处理</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-13T22:30:20+08:00">
+                2017-05-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript入门/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript入门</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/13/jQuery选择器-Dom操作-样式-事件处理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/05/13/jQuery选择器-Dom操作-样式-事件处理/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/05/13/jQuery选择器-Dom操作-样式-事件处理/" class="leancloud_visitors" data-flag-title="jQuery选择器&Dom操作&样式&事件处理">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="1-说说库和框架的区别？"><a href="#1-说说库和框架的区别？" class="headerlink" title="1. 说说库和框架的区别？"></a>1. 说说库和框架的区别？</h4><ul>
+<li>库和框架都是一种有别于软件、面向程序开发者的产品形式。</li>
+<li>库：Library(简写Lib)，框架：Framework。</li>
+<li>库是将代码集合成的一个产品，供程序员调用。面向对象的代码组织形式而成的库也叫类库。面向过程的代码组织形式而成的库也叫函数库。在函数库中的可直接使用的函数叫库函数。开发者在使用库的时候，只需要使用库的一部分类或函数，然后继续实现自己的功能。</li>
+<li>框架则是为解决一个(一类)问题而开发的产品，框架用户一般只需要使用框架提供的类或函数，即可实现全部功能。可以说，框架是库的升级版。开发者在使用框架的时候，必须使用这个框架的全部代码。</li>
+<li>框架通过封装处理流程的控制逻辑，使它对开发者透明，来简化开发工作。</li>
+</ul>
+<h4 id="2-jquery-能做什么？"><a href="#2-jquery-能做什么？" class="headerlink" title="2. jquery 能做什么？"></a>2. jquery 能做什么？</h4><ul>
+<li>jQuery 是一个高效、精简并且功能丰富的 JavaScript 工具库。它提供的 API 易于使用且兼容众多浏览器，这让诸如 HTML 文档遍历和操作、事件处理、动画和 Ajax 操作更加简单。</li>
+</ul>
+<h4 id="3-jquery-对象和-DOM-原生对象有什么区别？如何转化？"><a href="#3-jquery-对象和-DOM-原生对象有什么区别？如何转化？" class="headerlink" title="3. jquery 对象和 DOM 原生对象有什么区别？如何转化？"></a>3. jquery 对象和 DOM 原生对象有什么区别？如何转化？</h4><ul>
+<li><p>DOM对象是通过原生JavaScript获得的对象，jQuery对象是通过jQuery选择器获得的对象；<br>jQuery对象只能使用jQuery的属性和方法，DOM对象只能使用DOM的属性和方法</p>
+</li>
+<li><p>jQuery对象转DOM对象（可以通过类数组下标的获取方式或者get方法获取指定index的DOM对象）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;ul id=&quot;ct&quot;&gt;</div><div class="line">    	&lt;li class=&apos;number&apos;&gt;one&lt;/li&gt;</div><div class="line">    	&lt;li class=&apos;number&apos;&gt;two&lt;/li&gt;</div><div class="line">    	&lt;li class=&apos;number&apos;&gt;three&lt;/li&gt;</div><div class="line">    &lt;/ul&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>通过类数组下标的获取方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(&apos;.number&apos;)[2] //&lt;li class=&apos;number&apos;&gt;three&lt;/li&gt;</div><div class="line">$(&apos;.number&apos;).eq(2)[0] //&lt;li class=&apos;number&apos;&gt;three&lt;/li&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>通过get方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;.number&apos;).get(2) //&lt;li class=&apos;number&apos;&gt;three&lt;/li&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>DOM对象转jQuery对象（使用$()将DOM对象包裹起来就是jQuery对象）</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var ct = document.getElementById(&apos;ct&apos;) //DOM对象</div><div class="line">var $ct = $(ct) //转化为jQuery对象$ct</div></pre></td></tr></table></figure>
+<h4 id="4-jquery中如何绑定事件？bind、unbind、delegate、live、on、off都有什么作用？推荐使用哪种？使用on绑定事件使用事件代理的写法？"><a href="#4-jquery中如何绑定事件？bind、unbind、delegate、live、on、off都有什么作用？推荐使用哪种？使用on绑定事件使用事件代理的写法？" class="headerlink" title="4. jquery中如何绑定事件？bind、unbind、delegate、live、on、off都有什么作用？推荐使用哪种？使用on绑定事件使用事件代理的写法？"></a>4. jquery中如何绑定事件？bind、unbind、delegate、live、on、off都有什么作用？推荐使用哪种？使用on绑定事件使用事件代理的写法？</h4>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/13/jQuery选择器-Dom操作-样式-事件处理/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/13/JSONP-跨域/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1340,170 +1526,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/11/Math-数组-Date/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Winters">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/image/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Winters's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/11/Math-数组-Date/" itemprop="url">Math&数组&Date</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-11T21:23:19+08:00">
-                2017-05-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript入门/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript入门</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/05/11/Math-数组-Date/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/11/Math-数组-Date/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/05/11/Math-数组-Date/" class="leancloud_visitors" data-flag-title="Math&数组&Date">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h3><h4 id="1-写一个函数，返回从min到max之间的随机整数，包括min不包括max"><a href="#1-写一个函数，返回从min到max之间的随机整数，包括min不包括max" class="headerlink" title="1. 写一个函数，返回从min到max之间的随机整数，包括min不包括max"></a>1. 写一个函数，返回从min到max之间的随机整数，包括min不包括max</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function randomInt(min, max) &#123;</div><div class="line">    return Math.floor(Math.random() * (max - min)) + min;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><em>非作业内容</em> //检测随机数出现频率<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">function randomInt(min,max)&#123;</div><div class="line">//得出每个随机数的次数</div><div class="line">    var MAX = 10000;</div><div class="line">    var obj = &#123;&#125;;</div><div class="line">    for(var i = 0; i &lt; MAX; i++)&#123;</div><div class="line">        var val = Math.floor(Math.random() * (max - min)) + min;</div><div class="line">        if(obj[val] === undefined)&#123;</div><div class="line">            obj[val] = 1;</div><div class="line">        &#125;else&#123;</div><div class="line">            obj[val]++;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">//得出每个随机数的频率</div><div class="line">    for(var key in obj)&#123;</div><div class="line">        obj[key] = obj[key]/MAX</div><div class="line">    &#125;</div><div class="line">console.log(obj);</div></pre></td></tr></table></figure></p>
-<h4 id="2-写一个函数，返回从min都max之间的随机整数，包括min包括max"><a href="#2-写一个函数，返回从min都max之间的随机整数，包括min包括max" class="headerlink" title="2. 写一个函数，返回从min都max之间的随机整数，包括min包括max"></a>2. 写一个函数，返回从min都max之间的随机整数，包括min包括max</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function randomInt(min, max) &#123;</div><div class="line">    return Math.floor(Math.random() * (max - min + 1)) + min;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="3-写一个函数，生成一个长度为-n-的随机字符串，字符串字符的取值范围包括0到9，a到-z，A到Z。"><a href="#3-写一个函数，生成一个长度为-n-的随机字符串，字符串字符的取值范围包括0到9，a到-z，A到Z。" class="headerlink" title="3. 写一个函数，生成一个长度为 n 的随机字符串，字符串字符的取值范围包括0到9，a到 z，A到Z。"></a>3. 写一个函数，生成一个长度为 n 的随机字符串，字符串字符的取值范围包括0到9，a到 z，A到Z。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function getRandStr(len)&#123;</div><div class="line">    var dict = &apos;0123456789abcdefghijkmnlopqrstuvwxyzABCDEFGHIJKMNLOPQRSTUVWXYZ&apos;;</div><div class="line">    var ch, str = &apos;&apos;;</div><div class="line">    for(var i = 0; i &lt; len; i++)&#123;</div><div class="line">        var idx = Math.floor(Math.random() * 62);</div><div class="line">        ch = dict[idx];</div><div class="line">        str += ch;</div><div class="line">    &#125;</div><div class="line">    return str;</div><div class="line">&#125;</div><div class="line">var str = getRandStr(10); // 0a3iJiRZap</div></pre></td></tr></table></figure>
-<h4 id="4-写一个函数，生成一个随机-IP-地址，一个合法的-IP-地址为-0-0-0-0-255-255-255-255"><a href="#4-写一个函数，生成一个随机-IP-地址，一个合法的-IP-地址为-0-0-0-0-255-255-255-255" class="headerlink" title="4. 写一个函数，生成一个随机 IP 地址，一个合法的 IP 地址为 0.0.0.0~255.255.255.255"></a>4. 写一个函数，生成一个随机 IP 地址，一个合法的 IP 地址为 0.0.0.0~255.255.255.255</h4>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/11/Math-数组-Date/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1553,7 +1575,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-count">23</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

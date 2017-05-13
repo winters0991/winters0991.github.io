@@ -92,16 +92,16 @@
 
 
 
-<meta name="description" content="1. 什么是 CSS hack 由于不同厂商的浏览器或某浏览器的不同版本（如IE6-IE11/Firefox/Safari/Opera/Chrome等），对CSS的支持、解析不一样，导致在不同浏览器的环境中呈现出不一致的页面展现效果。这时为了获得统一的页面效果，就需要针对不同的浏览器或不同版本写特定的CSS样式，我们把这个针对不同的浏览器或不同版本写相应的CSS code的过程，叫做CSS hac">
+<meta name="description" content="1. 说说库和框架的区别？ 库和框架都是一种有别于软件、面向程序开发者的产品形式。 库：Library(简写Lib)，框架：Framework。 库是将代码集合成的一个产品，供程序员调用。面向对象的代码组织形式而成的库也叫类库。面向过程的代码组织形式而成的库也叫函数库。在函数库中的可直接使用的函数叫库函数。开发者在使用库的时候，只需要使用库的一部分类或函数，然后继续实现自己的功能。 框架则是为解决">
 <meta property="og:type" content="article">
-<meta property="og:title" content="浏览器兼容">
-<meta property="og:url" content="http://yoursite.com/2017/05/09/CSS布局/index.html">
+<meta property="og:title" content="jQuery选择器&amp;Dom操作&amp;样式&amp;事件处理">
+<meta property="og:url" content="http://yoursite.com/2017/05/13/jQuery选择器-Dom操作-样式-事件处理/index.html">
 <meta property="og:site_name" content="Winters&#39;s Blog">
-<meta property="og:description" content="1. 什么是 CSS hack 由于不同厂商的浏览器或某浏览器的不同版本（如IE6-IE11/Firefox/Safari/Opera/Chrome等），对CSS的支持、解析不一样，导致在不同浏览器的环境中呈现出不一致的页面展现效果。这时为了获得统一的页面效果，就需要针对不同的浏览器或不同版本写特定的CSS样式，我们把这个针对不同的浏览器或不同版本写相应的CSS code的过程，叫做CSS hac">
-<meta property="og:updated_time" content="2017-05-09T07:26:49.471Z">
+<meta property="og:description" content="1. 说说库和框架的区别？ 库和框架都是一种有别于软件、面向程序开发者的产品形式。 库：Library(简写Lib)，框架：Framework。 库是将代码集合成的一个产品，供程序员调用。面向对象的代码组织形式而成的库也叫类库。面向过程的代码组织形式而成的库也叫函数库。在函数库中的可直接使用的函数叫库函数。开发者在使用库的时候，只需要使用库的一部分类或函数，然后继续实现自己的功能。 框架则是为解决">
+<meta property="og:updated_time" content="2017-05-13T14:32:35.244Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="浏览器兼容">
-<meta name="twitter:description" content="1. 什么是 CSS hack 由于不同厂商的浏览器或某浏览器的不同版本（如IE6-IE11/Firefox/Safari/Opera/Chrome等），对CSS的支持、解析不一样，导致在不同浏览器的环境中呈现出不一致的页面展现效果。这时为了获得统一的页面效果，就需要针对不同的浏览器或不同版本写特定的CSS样式，我们把这个针对不同的浏览器或不同版本写相应的CSS code的过程，叫做CSS hac">
+<meta name="twitter:title" content="jQuery选择器&amp;Dom操作&amp;样式&amp;事件处理">
+<meta name="twitter:description" content="1. 说说库和框架的区别？ 库和框架都是一种有别于软件、面向程序开发者的产品形式。 库：Library(简写Lib)，框架：Framework。 库是将代码集合成的一个产品，供程序员调用。面向对象的代码组织形式而成的库也叫类库。面向过程的代码组织形式而成的库也叫函数库。在函数库中的可直接使用的函数叫库函数。开发者在使用库的时候，只需要使用库的一部分类或函数，然后继续实现自己的功能。 框架则是为解决">
 
 
 
@@ -129,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/05/09/CSS布局/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/05/13/jQuery选择器-Dom操作-样式-事件处理/"/>
 
 
 
 
 
-  <title>浏览器兼容 | Winters's Blog</title>
+  <title>jQuery选择器&Dom操作&样式&事件处理 | Winters's Blog</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -298,7 +298,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/09/CSS布局/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/13/jQuery选择器-Dom操作-样式-事件处理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Winters">
@@ -315,7 +315,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">浏览器兼容</h1>
+          <h1 class="post-title" itemprop="name headline">jQuery选择器&Dom操作&样式&事件处理</h1>
         
 
         <div class="post-meta">
@@ -327,8 +327,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-09T13:01:55+08:00">
-                2017-05-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-13T22:30:20+08:00">
+                2017-05-13
               </time>
             
 
@@ -350,8 +350,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS入门/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS入门</span>
+                  <a href="/categories/JavaScript入门/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript入门</span>
                   </a>
                 </span>
 
@@ -368,9 +368,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/05/09/CSS布局/#comments" itemprop="discussionUrl">
+                <a href="/2017/05/13/jQuery选择器-Dom操作-样式-事件处理/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/09/CSS布局/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/05/13/jQuery选择器-Dom操作-样式-事件处理/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -378,7 +378,7 @@
 
           
           
-             <span id="/2017/05/09/CSS布局/" class="leancloud_visitors" data-flag-title="浏览器兼容">
+             <span id="/2017/05/13/jQuery选择器-Dom操作-样式-事件处理/" class="leancloud_visitors" data-flag-title="jQuery选择器&Dom操作&样式&事件处理">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -406,67 +406,58 @@
       
 
       
-        <h4 id="1-什么是-CSS-hack"><a href="#1-什么是-CSS-hack" class="headerlink" title="1. 什么是 CSS hack"></a>1. 什么是 CSS hack</h4><ul>
-<li>由于不同厂商的浏览器或某浏览器的不同版本（如IE6-IE11/Firefox/Safari/Opera/Chrome等），对CSS的支持、解析不一样，导致在不同浏览器的环境中呈现出不一致的页面展现效果。这时为了获得统一的页面效果，就需要针对不同的浏览器或不同版本写特定的CSS样式，我们把这个针对不同的浏览器或不同版本写相应的CSS code的过程，叫做CSS hack。</li>
-<li>CSS hack大致有3种表现形式，CSS属性前缀法、选择器前缀法以及IE条件注释法（即HTML头部引用if IE）hack，实际项目中CSS hack大部分是针对IE浏览器不同版本之间的表现差异而引入的。</li>
+        <h4 id="1-说说库和框架的区别？"><a href="#1-说说库和框架的区别？" class="headerlink" title="1. 说说库和框架的区别？"></a>1. 说说库和框架的区别？</h4><ul>
+<li>库和框架都是一种有别于软件、面向程序开发者的产品形式。</li>
+<li>库：Library(简写Lib)，框架：Framework。</li>
+<li>库是将代码集合成的一个产品，供程序员调用。面向对象的代码组织形式而成的库也叫类库。面向过程的代码组织形式而成的库也叫函数库。在函数库中的可直接使用的函数叫库函数。开发者在使用库的时候，只需要使用库的一部分类或函数，然后继续实现自己的功能。</li>
+<li>框架则是为解决一个(一类)问题而开发的产品，框架用户一般只需要使用框架提供的类或函数，即可实现全部功能。可以说，框架是库的升级版。开发者在使用框架的时候，必须使用这个框架的全部代码。</li>
+<li>框架通过封装处理流程的控制逻辑，使它对开发者透明，来简化开发工作。</li>
 </ul>
-<h4 id="2-谈一谈浏览器兼容的思路"><a href="#2-谈一谈浏览器兼容的思路" class="headerlink" title="2. 谈一谈浏览器兼容的思路"></a>2. 谈一谈浏览器兼容的思路</h4><ol>
-<li>要不要做？<ul>
-<li>产品的角度（产品的受众、受众的浏览器比例、效果优先还是基本功能优先）</li>
-<li>成本的角度 (有无必要做)</li>
+<h4 id="2-jquery-能做什么？"><a href="#2-jquery-能做什么？" class="headerlink" title="2. jquery 能做什么？"></a>2. jquery 能做什么？</h4><ul>
+<li>jQuery 是一个高效、精简并且功能丰富的 JavaScript 工具库。它提供的 API 易于使用且兼容众多浏览器，这让诸如 HTML 文档遍历和操作、事件处理、动画和 Ajax 操作更加简单。</li>
 </ul>
+<h4 id="3-jquery-对象和-DOM-原生对象有什么区别？如何转化？"><a href="#3-jquery-对象和-DOM-原生对象有什么区别？如何转化？" class="headerlink" title="3. jquery 对象和 DOM 原生对象有什么区别？如何转化？"></a>3. jquery 对象和 DOM 原生对象有什么区别？如何转化？</h4><ul>
+<li><p>DOM对象是通过原生JavaScript获得的对象，jQuery对象是通过jQuery选择器获得的对象；<br>jQuery对象只能使用jQuery的属性和方法，DOM对象只能使用DOM的属性和方法</p>
 </li>
-<li>做到什么程度？<ul>
-<li>让哪些浏览器支持哪些效果</li>
-</ul>
+<li><p>jQuery对象转DOM对象（可以通过类数组下标的获取方式或者get方法获取指定index的DOM对象）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;ul id=&quot;ct&quot;&gt;</div><div class="line">    	&lt;li class=&apos;number&apos;&gt;one&lt;/li&gt;</div><div class="line">    	&lt;li class=&apos;number&apos;&gt;two&lt;/li&gt;</div><div class="line">    	&lt;li class=&apos;number&apos;&gt;three&lt;/li&gt;</div><div class="line">    &lt;/ul&gt;</div></pre></td></tr></table></figure>
 </li>
-<li>如何做？<ul>
-<li>明确效果是要优雅降级还是渐进增强：<br>1.渐进增强(progressive enhancement): 针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。<br>2.优雅降级 (graceful degradation): 一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。</li>
-<li>根据兼容需求选择技术框架/库(jquery)</li>
-<li>根据兼容需求选择兼容工具(html5shiv.js、respond.js、css reset、normalize.css、Modernizr)</li>
-<li>postCSS</li>
-<li>条件注释、CSS Hack、js 能力检测做一些修补</li>
-</ul>
+<li><p>通过类数组下标的获取方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(&apos;.number&apos;)[2] //&lt;li class=&apos;number&apos;&gt;three&lt;/li&gt;</div><div class="line">$(&apos;.number&apos;).eq(2)[0] //&lt;li class=&apos;number&apos;&gt;three&lt;/li&gt;</div></pre></td></tr></table></figure>
 </li>
-</ol>
-<h4 id="3-列举5种以上浏览器兼容的写法"><a href="#3-列举5种以上浏览器兼容的写法" class="headerlink" title="3. 列举5种以上浏览器兼容的写法"></a>3. 列举5种以上浏览器兼容的写法</h4><a id="more"></a>
+<li><p>通过get方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;.number&apos;).get(2) //&lt;li class=&apos;number&apos;&gt;three&lt;/li&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>DOM对象转jQuery对象（使用$()将DOM对象包裹起来就是jQuery对象）</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var ct = document.getElementById(&apos;ct&apos;) //DOM对象</div><div class="line">var $ct = $(ct) //转化为jQuery对象$ct</div></pre></td></tr></table></figure>
+<h4 id="4-jquery中如何绑定事件？bind、unbind、delegate、live、on、off都有什么作用？推荐使用哪种？使用on绑定事件使用事件代理的写法？"><a href="#4-jquery中如何绑定事件？bind、unbind、delegate、live、on、off都有什么作用？推荐使用哪种？使用on绑定事件使用事件代理的写法？" class="headerlink" title="4. jquery中如何绑定事件？bind、unbind、delegate、live、on、off都有什么作用？推荐使用哪种？使用on绑定事件使用事件代理的写法？"></a>4. jquery中如何绑定事件？bind、unbind、delegate、live、on、off都有什么作用？推荐使用哪种？使用on绑定事件使用事件代理的写法？</h4><a id="more"></a>
 <ul>
-<li><p>inline-block不兼容IE6、7，兼容写法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">div &#123;</div><div class="line">    display: inline-block;</div><div class="line">    *zoom: 1;</div><div class="line">    *display: inline;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li><p>jQuery中绑定事件的方法：.bind(),.live(),.delegate(),.on()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(&apos;#ct&apos;).bind(&apos;click&apos;,function()&#123;</div><div class="line">&#125;);//这是最直接的绑定方法。jQuery 扫描文档找到所有 $(&apos;#ct&apos;) 元素，然后给每一个找到的元素的 click 事件绑定处理函数。</div><div class="line">$(&apos;#ct&apos;).unbind(&apos;&apos;) //不传参数，解绑所有事件</div><div class="line">$(&apos;#ct&apos;).unbind(&apos;click&apos;) //传入参数，解绑指定事件</div></pre></td></tr></table></figure>
 </li>
-<li><p>IE6、7清除浮动：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.clearfix:after&#123;</div><div class="line">    content: &apos;&apos;;</div><div class="line">    display: block;</div><div class="line">    clear: both;</div><div class="line">&#125;</div><div class="line">.clearfix&#123;</div><div class="line">    *zoom: 1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li><p>delegate为事件代理</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;#ct&apos;).delegate(&apos;a&apos;, &apos;click&apos;, function());//jQuery扫描文档找到 $(&apos;#ct&apos;)，绑定处理函数到它的 click 事件，&apos;a&apos; css选择器作为函数的参数。当有事件冒泡到 $(&apos;#ct&apos;)，检查事件是不是 click，并检查target element是不是匹配css选择器，如果两者都符合，执行函数。</div></pre></td></tr></table></figure>
 </li>
-<li><p>浮动元素双倍margin：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.content &#123;</div><div class="line">    float: left;</div><div class="line">    width: 200px;</div><div class="line">    margin-left: 10px;</div><div class="line">    display: inline;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li><p>live</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;a&apos;).live(&apos;click&apos;, function());//jQuery绑定处理函数到 $(document) 元素，并把 &apos;click&apos; 和 &apos;a&apos; 作为函数的参数。有事件冒泡到document节点的时候，检查这个事件是不是 click 事件，target element能不能匹配 &apos;a&apos; css选择器，如果两个条件都是true，处理函数执行。</div></pre></td></tr></table></figure>
 </li>
-<li><p>设置元素的最小高度(min-height)：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.ct &#123;</div><div class="line">    min-height: 500px;</div><div class="line">    height: auto !important;</div><div class="line">    height: 500px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li><p>jQuery 的 delegate 方法比 live 方法好</p>
 </li>
-<li><p>禁用IE默认的垂直滚动条：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">html &#123;</div><div class="line">    overflow: auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li>在1.7之前的版本中jQuery处理事件有多个方法，作用各不相同，后来统一使用on/off（解绑事件）方法<br><code>$(&#39;#ct&#39;).on(events,selector,function())</code></li>
+</ul>
+<h4 id="5-jquery-如何展示-隐藏元素？"><a href="#5-jquery-如何展示-隐藏元素？" class="headerlink" title="5. jquery 如何展示/隐藏元素？"></a>5. jquery 如何展示/隐藏元素？</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(selecctor).hide(speed,callback);</div><div class="line">$(selecctor).show(speed,callback);</div></pre></td></tr></table></figure>
+<ul>
+<li>speed：表示速度的参数，可选（slow,fast,normal）或者毫秒数;<br>callback：是隐藏或显示完成后所执行的函数名称。</li>
+</ul>
+<h4 id="6-jquery-动画如何使用？"><a href="#6-jquery-动画如何使用？" class="headerlink" title="6. jquery 动画如何使用？"></a>6. jquery 动画如何使用？</h4><p><code>$(selector).animate( properties [, duration ] [, easing ] [, complete ] )//properties是一个CSS属性和值的对象,动画将根据这组对象移动。后面三个参数可选。</code></p>
+<h4 id="7-如何设置和获取元素内部-HTML-内容？如何设置和获取元素内部文本？"><a href="#7-如何设置和获取元素内部-HTML-内容？如何设置和获取元素内部文本？" class="headerlink" title="7. 如何设置和获取元素内部 HTML 内容？如何设置和获取元素内部文本？"></a>7. 如何设置和获取元素内部 HTML 内容？如何设置和获取元素内部文本？</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(&apos;#ct&apos;).html() //获取元素内部HTML</div><div class="line">$(&apos;#ct&apos;).html([string]) //设置元素内部HTML</div><div class="line">$(&apos;#ct&apos;).text() //获取元素内部文本</div><div class="line">$(&apos;#ct&apos;).text(value) //设置元素内部文本</div></pre></td></tr></table></figure>
+<h4 id="8-如何设置和获取表单用户输入或者选择的内容？如何设置和获取元素属性？"><a href="#8-如何设置和获取表单用户输入或者选择的内容？如何设置和获取元素属性？" class="headerlink" title="8. 如何设置和获取表单用户输入或者选择的内容？如何设置和获取元素属性？"></a>8. 如何设置和获取表单用户输入或者选择的内容？如何设置和获取元素属性？</h4><ul>
+<li><code>.val([value])</code><br>这是一个读写双用的方法，用来处理input的value，当方法没有参数的时候返回input的value值，当传递了一个参数的时候，方法修改input的value值为参数值<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(&apos;input&apos;).val()</div><div class="line">$(&apos;input&apos;).val(&apos;newValue&apos;)</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h4 id="4-以下工具-名词是做什么的？"><a href="#4-以下工具-名词是做什么的？" class="headerlink" title="4. 以下工具/名词是做什么的？"></a>4. 以下工具/名词是做什么的？</h4><ul>
-<li><p>条件注释<br>用于HTML源码中被IE有条件解释的语句。条件注释可被用来向IE提供及隐藏代码。使用了条件注释的页面在IE9中可正常工作，但在IE10中无法正常工作。 IE10不再支持条件注释。</p>
-</li>
-<li><p>IE Hack<br>针对IE浏览器的不同版本去写不同的CSS，让它能在这些浏览器中得到我们想要的页面效果。常用方法：CSS属性前缀法、选择器前缀法以及IE条件注释法。</p>
-</li>
-<li><p>js 能力检测<br>使用js检测浏览器支持的属性，以便展示效果。目标不是识别特定的浏览器，而是识别浏览器的能力。</p>
-</li>
-<li><p>html5shiv.js<br>通过使用html5shiv.js让IE9以下版本浏览器支持所有的HTML5标签。</p>
-</li>
-<li><p>respond.js<br>respond.js让不支持css3 Media Query的浏览器包括IE6-IE8支持查询。</p>
-</li>
-<li><p>css reset<br>css reset(css重置、清除css样式)重置样式，清除浏览器默认样式。</p>
-</li>
-<li><p>normalize.css<br>normalize.css 是一个可以定制的CSS文件，它让不同的浏览器在渲染网页元素的时候形式更统一。</p>
-</li>
-<li><p>Modernizr<br>Modernizr是一个开源的JS库，它使得那些基于访客浏览器的不同（指对新标准支持性的差异）而开发不同级别体验的设计师的工作变得更为简单。它使得设计师可以在支持HTML5和CSS3的浏览器中充分利用HTML5和CSS3的特性进行开发，同时又不会牺牲其他不支持这些新技术的浏览器的控制。</p>
-</li>
-<li><p>postCSS<br>PostCSS可以直观的理解为：它就是一个平台；PostCSS提供了一个解析器，它能够将CSS解析成抽象语法树（AST）；通过在PostCSS这个平台上，能够开发一些插件，来处理CSS，比如热门的：autoprefixer；能够使用JavaScript来开发插件。</p>
-</li>
-</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">.attr(attributeName) //获取元素特定属性的值</div><div class="line">.attr(attributeName, value)//为元素属性赋值</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -503,8 +494,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/09/浮动定位-BFC-边距合并/" rel="next" title="浮动定位&BFC&边距合并">
-                <i class="fa fa-chevron-left"></i> 浮动定位&BFC&边距合并
+              <a href="/2017/05/13/JSONP-跨域/" rel="next" title="JSONP&跨域">
+                <i class="fa fa-chevron-left"></i> JSONP&跨域
               </a>
             
           </div>
@@ -512,10 +503,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/09/CSS规范-垂直居中/" rel="prev" title="CSS规范&垂直居中">
-                CSS规范&垂直居中 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -660,7 +647,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-什么是-CSS-hack"><span class="nav-number">1.</span> <span class="nav-text">1. 什么是 CSS hack</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-谈一谈浏览器兼容的思路"><span class="nav-number">2.</span> <span class="nav-text">2. 谈一谈浏览器兼容的思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-列举5种以上浏览器兼容的写法"><span class="nav-number">3.</span> <span class="nav-text">3. 列举5种以上浏览器兼容的写法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-以下工具-名词是做什么的？"><span class="nav-number">4.</span> <span class="nav-text">4. 以下工具/名词是做什么的？</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-说说库和框架的区别？"><span class="nav-number">1.</span> <span class="nav-text">1. 说说库和框架的区别？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-jquery-能做什么？"><span class="nav-number">2.</span> <span class="nav-text">2. jquery 能做什么？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-jquery-对象和-DOM-原生对象有什么区别？如何转化？"><span class="nav-number">3.</span> <span class="nav-text">3. jquery 对象和 DOM 原生对象有什么区别？如何转化？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-jquery中如何绑定事件？bind、unbind、delegate、live、on、off都有什么作用？推荐使用哪种？使用on绑定事件使用事件代理的写法？"><span class="nav-number">4.</span> <span class="nav-text">4. jquery中如何绑定事件？bind、unbind、delegate、live、on、off都有什么作用？推荐使用哪种？使用on绑定事件使用事件代理的写法？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-jquery-如何展示-隐藏元素？"><span class="nav-number">5.</span> <span class="nav-text">5. jquery 如何展示/隐藏元素？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-jquery-动画如何使用？"><span class="nav-number">6.</span> <span class="nav-text">6. jquery 动画如何使用？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-如何设置和获取元素内部-HTML-内容？如何设置和获取元素内部文本？"><span class="nav-number">7.</span> <span class="nav-text">7. 如何设置和获取元素内部 HTML 内容？如何设置和获取元素内部文本？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-如何设置和获取表单用户输入或者选择的内容？如何设置和获取元素属性？"><span class="nav-number">8.</span> <span class="nav-text">8. 如何设置和获取表单用户输入或者选择的内容？如何设置和获取元素属性？</span></a></li></ol></div>
             
 
           </div>
@@ -792,9 +779,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/05/09/CSS布局/';
-          this.page.identifier = '2017/05/09/CSS布局/';
-          this.page.title = '浏览器兼容';
+          this.page.url = 'http://yoursite.com/2017/05/13/jQuery选择器-Dom操作-样式-事件处理/';
+          this.page.identifier = '2017/05/13/jQuery选择器-Dom操作-样式-事件处理/';
+          this.page.title = 'jQuery选择器&Dom操作&样式&事件处理';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://.disqus.com/embed.js';
