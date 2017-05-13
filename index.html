@@ -299,6 +299,362 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/13/JSONP-跨域/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Winters">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/image/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Winters's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/13/JSONP-跨域/" itemprop="url">JSONP&跨域</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-13T17:26:58+08:00">
+                2017-05-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript入门/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript入门</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/13/JSONP-跨域/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/05/13/JSONP-跨域/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/05/13/JSONP-跨域/" class="leancloud_visitors" data-flag-title="JSONP&跨域">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="1-什么是同源策略"><a href="#1-什么是同源策略" class="headerlink" title="1. 什么是同源策略"></a>1. 什么是同源策略</h4><ul>
+<li>浏览器出于安全方面的考虑，只允许与本域下的接口交互。不同源的客户端脚本在没有明确授权的情况下，不能读写对方的资源。<br>本域指:<br>同协议：如都是http或者https<br>同域名：如都是<a href="http://www.example.com/dir" target="_blank" rel="external">http://www.example.com/dir</a> 和<a href="http://www.example.com/dir2" target="_blank" rel="external">http://www.example.com/dir2</a><br>同端口：如都是80端口</li>
+<li>同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。</li>
+<li>如果非同源，共有三种行为受到限制：<br>（1） Cookie、LocalStorage 和 IndexedDB 无法读取。<br>（2） DOM 无法获得。<br>（3） AJAX 请求不能发送。</li>
+</ul>
+<h4 id="2-什么是跨域？跨域有几种实现形式"><a href="#2-什么是跨域？跨域有几种实现形式" class="headerlink" title="2. 什么是跨域？跨域有几种实现形式"></a>2. 什么是跨域？跨域有几种实现形式</h4><ul>
+<li>跨域是指在不同的域之间进行数据传输或通信</li>
+<li><ol>
+<li>JSONP</li>
+<li>CORS 跨域资源共享(Cross-Origin Resource Sharing)，IE支持10以上</li>
+<li>降域</li>
+<li>postMessage</li>
+</ol>
+</li>
+</ul>
+<h4 id="3-JSONP-的原理是什么"><a href="#3-JSONP-的原理是什么" class="headerlink" title="3. JSONP 的原理是什么"></a>3. JSONP 的原理是什么</h4><ol>
+<li>定义数据处理函数fun</li>
+<li>创建script标签，src的地址执行后端接口，最后加个参数callback=fun</li>
+<li>后端在收到请求后，解析参数，计算返还数据，输出 fun(data) 字符串。</li>
+<li>fun(data)会放到script标签做为js执行。此时会调用fun函数，将data做为参数。</li>
+</ol>
+<h4 id="4-CORS是什么"><a href="#4-CORS是什么" class="headerlink" title="4. CORS是什么"></a>4. CORS是什么</h4><ul>
+<li>CORS 全称是跨域资源共享（Cross-Origin Resource Sharing），是一种 ajax 跨域请求资源的方式，支持现代浏览器，IE支持10以上。</li>
+<li>实现方式很简单，当使用 XMLHttpRequest 发送请求时，浏览器发现该请求不符合同源策略，会给该请求加一个请求头：Origin，后台进行一系列处理，如果确定接受请求则在返回结果中加入一个响应头：Access-Control-Allow-Origin; 浏览器判断该响应头中是否包含 Origin 的值，如果有则浏览器会处理响应，就可以拿到响应数据，如果不包含浏览器直接驳回，这时无法拿到响应数据。所以 CORS 的表象是让你觉得它与同源的 ajax 请求没什么区别，代码完全一样。</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/13/Ajax/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Winters">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/image/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Winters's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/13/Ajax/" itemprop="url">Ajax</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-13T16:22:29+08:00">
+                2017-05-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript入门/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript入门</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/13/Ajax/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/05/13/Ajax/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/05/13/Ajax/" class="leancloud_visitors" data-flag-title="Ajax">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="1-ajax-是什么？有什么作用？"><a href="#1-ajax-是什么？有什么作用？" class="headerlink" title="1. ajax 是什么？有什么作用？"></a>1. ajax 是什么？有什么作用？</h4><ul>
+<li><ul>
+<li>Ajax是Asynchronous JavaScript and XML的缩写，Ajax在浏览器与 Web 服务器之间使用异步数据传输（HTTP 请求）从服务器获取数据。这里的异步是指脱离当前浏览器页面的请求、加载等单独执行，这意味着可以在不重新加载整个网页的情况下，通过JavaScript发送请求、接受服务器传来的数据，然后操作DOM将新数据对网页的某部分进行更新，使用Ajax最直观的感受是向服务器获取新数据不需要刷新页面等待了。</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-前后端开发联调需要注意哪些事情？后端接口完成前如何-mock-数据？"><a href="#2-前后端开发联调需要注意哪些事情？后端接口完成前如何-mock-数据？" class="headerlink" title="2. 前后端开发联调需要注意哪些事情？后端接口完成前如何 mock 数据？"></a>2. 前后端开发联调需要注意哪些事情？后端接口完成前如何 mock 数据？</h4><ul>
+<li><p>1、确定接口名称，统一命名，定制规范<br>2、传输数据类型的确定以及数据大小等限制的确定<br>3、服务器、端口、方法、请求数据的一些限制</p>
+</li>
+<li><ol>
+<li>使用XAMPP等工具，搭建本地php服务器，编写php脚本提供临时数据</li>
+<li>使用mock.js生成模拟数据，拦截AJAX请求，并且返回模拟的数据进行测试</li>
+<li>使用node server-mock，解决后端模板的渲染和AJAX接口的处理来模拟数据</li>
+</ol>
+</li>
+</ul>
+<h4 id="3-点击按钮，使用-ajax-获取数据，如何在数据到来之前防止重复点击"><a href="#3-点击按钮，使用-ajax-获取数据，如何在数据到来之前防止重复点击" class="headerlink" title="3. 点击按钮，使用 ajax 获取数据，如何在数据到来之前防止重复点击?"></a>3. 点击按钮，使用 ajax 获取数据，如何在数据到来之前防止重复点击?</h4>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/13/Ajax/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/13/闭包-定时器-BOM/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1148,348 +1504,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/11/字符串与JSON/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Winters">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/image/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Winters's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/11/字符串与JSON/" itemprop="url">字符串与JSON</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-11T10:54:09+08:00">
-                2017-05-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript入门/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript入门</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/05/11/字符串与JSON/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/11/字符串与JSON/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/05/11/字符串与JSON/" class="leancloud_visitors" data-flag-title="字符串与JSON">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="1-使用数组拼接出如下字符串"><a href="#1-使用数组拼接出如下字符串" class="headerlink" title="1. 使用数组拼接出如下字符串"></a>1. 使用数组拼接出如下字符串</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">var prod = &#123;</div><div class="line">    name: &apos;女装&apos;,</div><div class="line">    styles: [&apos;短款&apos;, &apos;冬季&apos;, &apos;春装&apos;]</div><div class="line">&#125;;</div><div class="line">function getTplStr(data)&#123;</div><div class="line">    var arr = [];</div><div class="line">    arr.push(&apos;&lt;dl class=&quot;product&quot;&gt;&apos;+&apos;\n&apos;);</div><div class="line">    arr.push(&apos;\t&apos;+&apos;&lt;dt&gt;&apos;+data.name+&apos;&lt;/dt&gt;&apos;+&apos;\n&apos;);</div><div class="line">    for(var key in data.styles)&#123;</div><div class="line">        arr.push(&apos;\t&apos;+&apos;&lt;dd&gt;&apos;+data.styles[key]+&apos;&lt;/dd&gt;&apos;+&apos;\n&apos;)</div><div class="line">    &#125;</div><div class="line">    arr.push(&apos;&lt;/dl&gt;&apos;);</div><div class="line">    return arr.join(&apos;&apos;);</div><div class="line">&#125;;</div><div class="line">var result = getTplStr(prod);  //result为下面的字符串</div><div class="line">console.log(result);</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;dl class=&quot;product&quot;&gt;</div><div class="line">    &lt;dt&gt;女装&lt;/dt&gt;</div><div class="line">    &lt;dd&gt;短款&lt;/dd&gt;</div><div class="line">    &lt;dd&gt;冬季&lt;/dd&gt;</div><div class="line">    &lt;dd&gt;春装&lt;/dd&gt;</div><div class="line">&lt;/dl&gt;</div></pre></td></tr></table></figure>
-<h4 id="2-写出两种以上声明多行字符串的方法"><a href="#2-写出两种以上声明多行字符串的方法" class="headerlink" title="2. 写出两种以上声明多行字符串的方法"></a>2. 写出两种以上声明多行字符串的方法</h4><ul>
-<li><p>方法一：利用转义符\</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var longString = &quot;hello\</div><div class="line"> ji\</div><div class="line"> ren\</div><div class="line"> gu&quot;;</div><div class="line">longString</div><div class="line">// &quot;hello ji ren gu&quot;</div></pre></td></tr></table></figure>
-</li>
-<li><p>方法二：利用连接运算符（+）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var longString = &apos;hello &apos;</div><div class="line">  + &apos;ji &apos;</div><div class="line">  + &apos;ren &apos;</div><div class="line">  + &apos;gu&apos;;</div><div class="line">longString</div><div class="line">// &quot;hello ji ren gu&quot;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="3-补全如下代码-让输出结果为字符串-hello-饥人谷"><a href="#3-补全如下代码-让输出结果为字符串-hello-饥人谷" class="headerlink" title="3. 补全如下代码,让输出结果为字符串: hello\饥人谷"></a>3. 补全如下代码,让输出结果为字符串: hello\饥人谷</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var str = &apos;hello\\\\饥人谷&apos;</div><div class="line">console.log(str)</div></pre></td></tr></table></figure>
-<h4 id="4-以下代码输出什么-为什么"><a href="#4-以下代码输出什么-为什么" class="headerlink" title="4. 以下代码输出什么?为什么"></a>4. 以下代码输出什么?为什么</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str = &apos;jirengu\nruoyu&apos;</div><div class="line">console.log(str.length)</div><div class="line">//输出：13 使用了\n换行，占一个字符，空格不会计算在长度内</div></pre></td></tr></table></figure>
-<h4 id="5-写一个函数，判断一个字符串是回文字符串，如-abcdcba是回文字符串-abcdcbb不是"><a href="#5-写一个函数，判断一个字符串是回文字符串，如-abcdcba是回文字符串-abcdcbb不是" class="headerlink" title="5. 写一个函数，判断一个字符串是回文字符串，如 abcdcba是回文字符串, abcdcbb不是"></a>5. 写一个函数，判断一个字符串是回文字符串，如 abcdcba是回文字符串, abcdcbb不是</h4>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/11/字符串与JSON/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/10/引用类型对象拷贝/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Winters">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/image/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Winters's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/10/引用类型对象拷贝/" itemprop="url">引用类型对象拷贝</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-10T20:31:55+08:00">
-                2017-05-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript入门/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript入门</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/05/10/引用类型对象拷贝/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/10/引用类型对象拷贝/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/05/10/引用类型对象拷贝/" class="leancloud_visitors" data-flag-title="引用类型对象拷贝">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="1-引用类型有哪些？非引用类型有哪些"><a href="#1-引用类型有哪些？非引用类型有哪些" class="headerlink" title="1. 引用类型有哪些？非引用类型有哪些"></a>1. 引用类型有哪些？非引用类型有哪些</h4><ul>
-<li>引用类型值（对象、数组、函数、正则）：指的是那些保存在堆内存中的对象，变量中保存的实际上只是一个指针，这个指针执行内存中的另一个位置，由该位置保存对象。</li>
-<li>基本类型值（数值、布尔值、字符串、null和undefined）：指的是保存在栈内存中的简单数据段。</li>
-</ul>
-<h4 id="2-如下代码输出什么？为什么"><a href="#2-如下代码输出什么？为什么" class="headerlink" title="2. 如下代码输出什么？为什么"></a>2. 如下代码输出什么？为什么</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var obj1 = &#123;a:1, b:2&#125;;</div><div class="line">var obj2 = &#123;a:1, b:2&#125;;</div><div class="line">console.log(obj1 == obj2); //输出：false obj1与0bj2指向不同的地址</div><div class="line">console.log(obj1 = obj2); //输出：&#123;a:1, b:2&#125; obj2赋值给obj1</div><div class="line">console.log(obj1 == obj2); //输出：ture obj1与obj2地址相同</div></pre></td></tr></table></figure>
-<h4 id="3-如下代码输出什么-为什么"><a href="#3-如下代码输出什么-为什么" class="headerlink" title="3. 如下代码输出什么? 为什么"></a>3. 如下代码输出什么? 为什么</h4>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/10/引用类型对象拷贝/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1534,7 +1553,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
