@@ -299,6 +299,200 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/09/CSS规范-垂直居中/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Winters">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/image/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Winters's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/09/CSS规范-垂直居中/" itemprop="url">CSS规范&垂直居中</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-09T16:32:44+08:00">
+                2017-05-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS入门/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS入门</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/09/CSS规范-垂直居中/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/05/09/CSS规范-垂直居中/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/05/09/CSS规范-垂直居中/" class="leancloud_visitors" data-flag-title="CSS规范&垂直居中">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="1-说一说你平时写代码遵守的编码规范"><a href="#1-说一说你平时写代码遵守的编码规范" class="headerlink" title="1. 说一说你平时写代码遵守的编码规范"></a>1. 说一说你平时写代码遵守的编码规范</h4><ol>
+<li>关于命名<ul>
+<li>语义化标签优先</li>
+<li>命名体现功能，不涉及表现样式(颜色、字体、边框、背景等)</li>
+<li>所有命名都使用英文小写</li>
+<li>命名用引号包裹</li>
+<li>用中横线连接</li>
+</ul>
+</li>
+<li>关于html与css<ul>
+<li>嵌套元素应当缩进一次（即两个空格）</li>
+<li>减少标签的数量</li>
+<li>为选择器分组时，将单独的选择器单独放在一行。</li>
+<li>css的 :后加个空格， {前加个空格</li>
+<li>每条声明后都加上分号</li>
+<li>换行，而不是放到一行</li>
+<li>颜色用小写，用缩写, #fff</li>
+<li>小数不用写前缀, 0.5s -&gt; .5s；0不用加单位</li>
+<li>尽量缩写， margin: 5px 10px 5px 10px -&gt; margin: 5px 10px</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><a href="http://codeguide.bootcss.com/" target="_blank" rel="external">遵守编码规范bootstrap</a></li>
+</ul>
+<h4 id="2-垂直居中有几种实现方式，给出代码范例"><a href="#2-垂直居中有几种实现方式，给出代码范例" class="headerlink" title="2. 垂直居中有几种实现方式，给出代码范例"></a>2. 垂直居中有几种实现方式，给出代码范例</h4><ol>
+<li>height=line-height实现单行文本垂直居中： <a href="http://js.jirengu.com/limopipovu/3/edit" target="_blank" rel="external">demo</a></li>
+<li>利用padding值相等实现：<a href="http://js.jirengu.com/yuhududupe/3/edit" target="_blank" rel="external">demo</a></li>
+<li><p>绝对定位</p>
+<ul>
+<li>利用负margin <a href="http://js.jirengu.com/topumimani/4/edit" target="_blank" rel="external">demo</a></li>
+<li>利用transform <a href="http://js.jirengu.com/nunaficufi/4/edit" target="_blank" rel="external">demo</a></li>
+<li>利用margin: auto <a href="http://js.jirengu.com/topumimani/10/edit" target="_blank" rel="external">demo</a></li>
+</ul>
+</li>
+<li><p>vertical-align: middle <a href="http://js.jirengu.com/vituziniju/3/edit" target="_blank" rel="external">demo</a></p>
+</li>
+<li>dispaly: table-cell <a href="http://js.jirengu.com/batewikode/6/edit" target="_blank" rel="external">demo</a></li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/09/CSS布局/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1374,178 +1568,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/07/CSS基础/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Winters">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/image/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Winters's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/07/CSS基础/" itemprop="url">CSS基础</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-07T18:02:28+08:00">
-                2017-05-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS入门/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS入门</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/05/07/CSS基础/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/07/CSS基础/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/05/07/CSS基础/" class="leancloud_visitors" data-flag-title="CSS基础">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="1-样式有几种引入方式"><a href="#1-样式有几种引入方式" class="headerlink" title="1. 样式有几种引入方式?"></a>1. 样式有几种引入方式?</h4><ul>
-<li><p>内联方式<br>内联方式指的是直接在HTML标签中的style属性中添加CSS。<br>示例：<br><code>&lt;div style=&quot;background: red&quot;&gt;&lt;/div&gt;</code></p>
-</li>
-<li><p>嵌入方式<br>嵌入方式指的是在HTML<code>&lt;head&gt;</code>标签中的<code>&lt;style&gt;</code>标签下书写 CSS 代码。<br>示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;head&gt;</div><div class="line">    &lt;style&gt;</div><div class="line">    .content &#123;</div><div class="line">        background: red;</div><div class="line">    &#125;</div><div class="line">    &lt;/style&gt;</div><div class="line">&lt;/head&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>链接方式<br>链接方式指的是使用HTML头部的<code>&lt;head&gt;</code>标签引入外部的CSS文件。<br>示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;head&gt;</div><div class="line">    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt;</div><div class="line">&lt;/head&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>导入方式<br>导入方式指的是使用CSS规则引入外部CSS文件。<br>示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">    @import url(style.css);</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/07/CSS基础/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1595,7 +1617,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
