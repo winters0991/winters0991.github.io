@@ -92,16 +92,19 @@
 
 
 
-<meta name="description" content="1. 什么是同源策略 浏览器出于安全方面的考虑，只允许与本域下的接口交互。不同源的客户端脚本在没有明确授权的情况下，不能读写对方的资源。本域指:同协议：如都是http或者https同域名：如都是http://www.example.com/dir 和http://www.example.com/dir2同端口：如都是80端口 同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。 如果">
+<meta name="description" content="this 相关1. apply、call 、bind有什么作用，什么区别 bind，返回一个新函数，并且使函数内部的this为传入的第一个参数 apply、call，调用一个函数，传入函数执行上下文及参数fn.call(context, param1, param2...)fn.apply(context, paramArray)第一个参数都是希望设置的this对象，不同之处在于call方法接收参">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JSONP&amp;跨域">
-<meta property="og:url" content="http://yoursite.com/2017/05/13/JSONP-跨域/index.html">
+<meta property="og:title" content="this&amp;原型链&amp;继承">
+<meta property="og:url" content="http://yoursite.com/2017/05/15/this-原型链-继承/index.html">
 <meta property="og:site_name" content="Winters&#39;s Blog">
-<meta property="og:description" content="1. 什么是同源策略 浏览器出于安全方面的考虑，只允许与本域下的接口交互。不同源的客户端脚本在没有明确授权的情况下，不能读写对方的资源。本域指:同协议：如都是http或者https同域名：如都是http://www.example.com/dir 和http://www.example.com/dir2同端口：如都是80端口 同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。 如果">
-<meta property="og:updated_time" content="2017-05-13T09:28:30.262Z">
+<meta property="og:description" content="this 相关1. apply、call 、bind有什么作用，什么区别 bind，返回一个新函数，并且使函数内部的this为传入的第一个参数 apply、call，调用一个函数，传入函数执行上下文及参数fn.call(context, param1, param2...)fn.apply(context, paramArray)第一个参数都是希望设置的this对象，不同之处在于call方法接收参">
+<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=58e25477ab64413a33009bf9">
+<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=58e31a8eab64413a3300b66f">
+<meta property="og:updated_time" content="2017-05-16T01:58:11.955Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JSONP&amp;跨域">
-<meta name="twitter:description" content="1. 什么是同源策略 浏览器出于安全方面的考虑，只允许与本域下的接口交互。不同源的客户端脚本在没有明确授权的情况下，不能读写对方的资源。本域指:同协议：如都是http或者https同域名：如都是http://www.example.com/dir 和http://www.example.com/dir2同端口：如都是80端口 同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。 如果">
+<meta name="twitter:title" content="this&amp;原型链&amp;继承">
+<meta name="twitter:description" content="this 相关1. apply、call 、bind有什么作用，什么区别 bind，返回一个新函数，并且使函数内部的this为传入的第一个参数 apply、call，调用一个函数，传入函数执行上下文及参数fn.call(context, param1, param2...)fn.apply(context, paramArray)第一个参数都是希望设置的this对象，不同之处在于call方法接收参">
+<meta name="twitter:image" content="https://leanote.com/api/file/getImage?fileId=58e25477ab64413a33009bf9">
 
 
 
@@ -129,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/05/13/JSONP-跨域/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/05/15/this-原型链-继承/"/>
 
 
 
 
 
-  <title>JSONP&跨域 | Winters's Blog</title>
+  <title>this&原型链&继承 | Winters's Blog</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -298,7 +301,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/13/JSONP-跨域/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/15/this-原型链-继承/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Winters">
@@ -315,7 +318,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JSONP&跨域</h1>
+          <h1 class="post-title" itemprop="name headline">this&原型链&继承</h1>
         
 
         <div class="post-meta">
@@ -327,8 +330,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-13T17:26:58+08:00">
-                2017-05-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-15T21:30:42+08:00">
+                2017-05-15
               </time>
             
 
@@ -368,9 +371,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/05/13/JSONP-跨域/#comments" itemprop="discussionUrl">
+                <a href="/2017/05/15/this-原型链-继承/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/13/JSONP-跨域/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/05/15/this-原型链-继承/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -378,7 +381,7 @@
 
           
           
-             <span id="/2017/05/13/JSONP-跨域/" class="leancloud_visitors" data-flag-title="JSONP&跨域">
+             <span id="/2017/05/15/this-原型链-继承/" class="leancloud_visitors" data-flag-title="this&原型链&继承">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -406,32 +409,48 @@
       
 
       
-        <h4 id="1-什么是同源策略"><a href="#1-什么是同源策略" class="headerlink" title="1. 什么是同源策略"></a>1. 什么是同源策略</h4><ul>
-<li>浏览器出于安全方面的考虑，只允许与本域下的接口交互。不同源的客户端脚本在没有明确授权的情况下，不能读写对方的资源。<br>本域指:<br>同协议：如都是http或者https<br>同域名：如都是<a href="http://www.example.com/dir" target="_blank" rel="external">http://www.example.com/dir</a> 和<a href="http://www.example.com/dir2" target="_blank" rel="external">http://www.example.com/dir2</a><br>同端口：如都是80端口</li>
-<li>同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。</li>
-<li>如果非同源，共有三种行为受到限制：<br>（1） Cookie、LocalStorage 和 IndexedDB 无法读取。<br>（2） DOM 无法获得。<br>（3） AJAX 请求不能发送。</li>
+        <h3 id="this-相关"><a href="#this-相关" class="headerlink" title="this 相关"></a>this 相关</h3><h4 id="1-apply、call-、bind有什么作用，什么区别"><a href="#1-apply、call-、bind有什么作用，什么区别" class="headerlink" title="1. apply、call 、bind有什么作用，什么区别"></a>1. apply、call 、bind有什么作用，什么区别</h4><ul>
+<li>bind，返回一个新函数，并且使函数内部的this为传入的第一个参数</li>
+<li>apply、call，调用一个函数，传入函数执行上下文及参数<br><code>fn.call(context, param1, param2...)</code><br><code>fn.apply(context, paramArray)</code><br>第一个参数都是希望设置的this对象，不同之处在于call方法接收参数列表，而apply接收参数数组。</li>
 </ul>
-<h4 id="2-什么是跨域？跨域有几种实现形式"><a href="#2-什么是跨域？跨域有几种实现形式" class="headerlink" title="2. 什么是跨域？跨域有几种实现形式"></a>2. 什么是跨域？跨域有几种实现形式</h4><ul>
-<li>跨域是指在不同的域之间进行数据传输或通信</li>
-<li><ol>
-<li>JSONP</li>
-<li>CORS 跨域资源共享(Cross-Origin Resource Sharing)，IE支持10以上</li>
-<li>降域</li>
-<li>postMessage</li>
-</ol>
+<h4 id="2-以下代码输出什么"><a href="#2-以下代码输出什么" class="headerlink" title="2. 以下代码输出什么?"></a>2. 以下代码输出什么?</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var john = &#123; </div><div class="line">  firstName: &quot;John&quot; </div><div class="line">&#125;</div><div class="line">function func() &#123; </div><div class="line">  alert(this.firstName + &quot;: hi!&quot;)</div><div class="line">&#125;</div><div class="line">john.sayHi = func</div><div class="line">john.sayHi()//输出：John: hi!</div></pre></td></tr></table></figure>
+<h4 id="3-下面代码输出什么，为什么"><a href="#3-下面代码输出什么，为什么" class="headerlink" title="3. 下面代码输出什么，为什么"></a>3. 下面代码输出什么，为什么</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">func() </div><div class="line">function func() &#123; </div><div class="line">  alert(this)</div><div class="line">&#125;//输出：object Window 因为函数声明前置，this的值是window</div></pre></td></tr></table></figure>
+<h4 id="4-下面代码输出什么"><a href="#4-下面代码输出什么" class="headerlink" title="4. 下面代码输出什么"></a>4. 下面代码输出什么</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">document.addEventListener(&apos;click&apos;, function(e)&#123;</div><div class="line">    console.log(this);</div><div class="line">    setTimeout(function()&#123;</div><div class="line">        console.log(this);</div><div class="line">    &#125;, 200);</div><div class="line">&#125;, false);//输出：document window</div></pre></td></tr></table></figure>
+<h4 id="5-下面代码输出什么，why"><a href="#5-下面代码输出什么，why" class="headerlink" title="5. 下面代码输出什么，why"></a>5. 下面代码输出什么，why</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var john = &#123; </div><div class="line">  firstName: &quot;John&quot; </div><div class="line">&#125;</div><div class="line"></div><div class="line">function func() &#123; </div><div class="line">  alert( this.firstName )</div><div class="line">&#125;</div><div class="line">func.call(john)//输出：john 因为call的第一个参数为this对象，所以传入对象john</div></pre></td></tr></table></figure>
+<h4 id="6-以下代码有什么问题，如何修改"><a href="#6-以下代码有什么问题，如何修改" class="headerlink" title="6. 以下代码有什么问题，如何修改"></a>6. 以下代码有什么问题，如何修改</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var module= &#123;</div><div class="line">  bind: function()&#123;</div><div class="line">    $btn.on(&apos;click&apos;, function()&#123;</div><div class="line">      console.log(this) //this指向eventTarget，即指向$btn </div><div class="line">      this.showMsg();</div><div class="line">    &#125;.bind(this))</div><div class="line">  &#125;,</div><div class="line">  </div><div class="line">  showMsg: function()&#123;</div><div class="line">    console.log(&apos;饥人谷&apos;);</div><div class="line">  &#125;</div><div class="line">&#125;//问题：this指向错误，dom元素上没有方法showMsg，无法执行，已在原代码修改</div></pre></td></tr></table></figure>
+<h3 id="原型链相关"><a href="#原型链相关" class="headerlink" title="原型链相关"></a>原型链相关</h3><a id="more"></a>
+<h4 id="7-有如下代码，解释Person、-prototype、proto、p、constructor之间的关联。"><a href="#7-有如下代码，解释Person、-prototype、proto、p、constructor之间的关联。" class="headerlink" title="7. 有如下代码，解释Person、 prototype、proto、p、constructor之间的关联。"></a>7. 有如下代码，解释Person、 prototype、<strong>proto</strong>、p、constructor之间的关联。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function Person(name)&#123;</div><div class="line">    this.name = name;</div><div class="line">&#125;</div><div class="line">Person.prototype.sayName = function()&#123;</div><div class="line">    console.log(&apos;My name is :&apos; + this.name);</div><div class="line">&#125;</div><div class="line">var p = new Person(&quot;若愚&quot;)</div><div class="line">p.sayName();</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">p.__proto__ === Person.prototype</div><div class="line">p.__proto__.constructor === Person</div><div class="line">Person.prototype.__proto__ === Object.prototype</div><div class="line">Person.prototype.constructor === Person</div><div class="line">Object.prototype.__proto__ === null</div><div class="line">Object.prototype.constructor === Object</div></pre></td></tr></table></figure>
+<h4 id="8-上例中，对对象-p-可以这样调用-p-toString-。toString是哪里来的-画出原型图-并解释什么是原型链。"><a href="#8-上例中，对对象-p-可以这样调用-p-toString-。toString是哪里来的-画出原型图-并解释什么是原型链。" class="headerlink" title="8. 上例中，对对象 p 可以这样调用 p.toString()。toString是哪里来的? 画出原型图?并解释什么是原型链。"></a>8. 上例中，对对象 p 可以这样调用 p.toString()。toString是哪里来的? 画出原型图?并解释什么是原型链。</h4><p><img src="https://leanote.com/api/file/getImage?fileId=58e25477ab64413a33009bf9" alt="title"></p>
+<p>对象P是没有toString这个方法的，但是它有一个<strong>proto</strong>属性是指向Person.prototype，Person.prototype中也没有这个方法就沿着Person.prototype中的<strong>proto</strong>继续找，到了Object.prototype中就有了toString的方法，就可以调用了。这样沿着<strong>proto</strong>的”链”就是原型链。</p>
+<h4 id="9-对String做扩展，实现如下方式获取字符串中频率最高的字符"><a href="#9-对String做扩展，实现如下方式获取字符串中频率最高的字符" class="headerlink" title="9. 对String做扩展，实现如下方式获取字符串中频率最高的字符"></a>9. 对String做扩展，实现如下方式获取字符串中频率最高的字符</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">String.prototype.getMostOften = function () &#123;</div><div class="line">    var str = this</div><div class="line">    var obj = &#123;&#125;</div><div class="line">    for (var i = 0; i &lt; str.length; i++)&#123;</div><div class="line">        if(obj[str[i]])&#123;</div><div class="line">            obj[str[i]]++</div><div class="line">        &#125;else&#123;</div><div class="line">            obj[str[i]] = 1</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    var sum = 0</div><div class="line">    var maxStr</div><div class="line">    for(var key in obj)&#123;</div><div class="line">        if(obj[key] &gt; sum)&#123;</div><div class="line">            sum = obj[key]</div><div class="line">            maxStr = key</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return maxStr</div><div class="line">&#125;</div><div class="line">var str = &apos;ahbbccdeddddfg&apos;</div><div class="line">var ch = str.getMostOften()</div><div class="line">console.log(ch) //d , 因为d 出现了5次</div></pre></td></tr></table></figure>
+<h4 id="10-instanceof有什么作用？内部逻辑是如何实现的？"><a href="#10-instanceof有什么作用？内部逻辑是如何实现的？" class="headerlink" title="10. instanceof有什么作用？内部逻辑是如何实现的？"></a>10. instanceof有什么作用？内部逻辑是如何实现的？</h4><ul>
+<li>instanceof 运算符用来测试一个对象在其原型链中是否存在一个构造函数的 prototype 属性。</li>
+<li>object(要检测的对象) instanceof constructor(构造函数)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function instanceof(obj, fn) &#123;</div><div class="line">  var objProto = obj.__proto__</div><div class="line">  while (objProto) &#123;</div><div class="line">    if (objProto === fn.prototype) &#123;</div><div class="line">      return true</div><div class="line">    &#125;else&#123;</div><div class="line">      objProto = objProto.__proto__</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  return false</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h4 id="3-JSONP-的原理是什么"><a href="#3-JSONP-的原理是什么" class="headerlink" title="3. JSONP 的原理是什么"></a>3. JSONP 的原理是什么</h4><ol>
-<li>定义数据处理函数fun</li>
-<li>创建script标签，src的地址执行后端接口，最后加个参数callback=fun</li>
-<li>后端在收到请求后，解析参数，计算返还数据，输出 fun(data) 字符串。</li>
-<li>fun(data)会放到script标签做为js执行。此时会调用fun函数，将data做为参数。</li>
-</ol>
-<h4 id="4-CORS是什么"><a href="#4-CORS是什么" class="headerlink" title="4. CORS是什么"></a>4. CORS是什么</h4><ul>
-<li>CORS 全称是跨域资源共享（Cross-Origin Resource Sharing），是一种 ajax 跨域请求资源的方式，支持现代浏览器，IE支持10以上。</li>
-<li>实现方式很简单，当使用 XMLHttpRequest 发送请求时，浏览器发现该请求不符合同源策略，会给该请求加一个请求头：Origin，后台进行一系列处理，如果确定接受请求则在返回结果中加入一个响应头：Access-Control-Allow-Origin; 浏览器判断该响应头中是否包含 Origin 的值，如果有则浏览器会处理响应，就可以拿到响应数据，如果不包含浏览器直接驳回，这时无法拿到响应数据。所以 CORS 的表象是让你觉得它与同源的 ajax 请求没什么区别，代码完全一样。</li>
+<h3 id="继承相关"><a href="#继承相关" class="headerlink" title="继承相关"></a>继承相关</h3><h4 id="11-继承有什么作用"><a href="#11-继承有什么作用" class="headerlink" title="11. 继承有什么作用?"></a>11. 继承有什么作用?</h4><ul>
+<li>继承是指一个对象直接使用另一对象的属性和方法。</li>
+<li>继承划分了类的层次性，父类代表更一般、更泛化的类，而子类则是更为具体、更为细化；继承是实现代码重用、扩展软件功能的重要手段，子类中与父类完全相同的属性和方法不必重写，只需写出新增或改写的内容，这就是说子类可以复用父类的内容，不必一切从零开始。</li>
 </ul>
-
+<h4 id="12-下面两种写法有什么区别"><a href="#12-下面两种写法有什么区别" class="headerlink" title="12. 下面两种写法有什么区别?"></a>12. 下面两种写法有什么区别?</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">//方法1</div><div class="line">function People(name, sex)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.sex = sex;</div><div class="line">    this.printName = function()&#123;</div><div class="line">        console.log(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">var p1 = new People(&apos;饥人谷&apos;, 2)</div><div class="line"></div><div class="line">//方法2</div><div class="line">function Person(name, sex)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.sex = sex;</div><div class="line">&#125;</div><div class="line"></div><div class="line">Person.prototype.printName = function()&#123;</div><div class="line">    console.log(this.name);</div><div class="line">&#125;</div><div class="line">var p1 = new Person(&apos;若愚&apos;, 27);</div></pre></td></tr></table></figure>
+<p>第一种方法中的printName方法是在构造函数Person实例对象里的，第二种方法printName方法是在函数Person的prototype对象上。<br>当再次创建一个Person实例对象时，第一种方法会再次创建printName方法，占用新内存，而第二种方法因为printName在函数Person的原型上，所以直接在实例对象的原型链上调用就可以，达到了节省内存的效果。</p>
+<h4 id="13-Object-create-有什么作用？兼容性如何？"><a href="#13-Object-create-有什么作用？兼容性如何？" class="headerlink" title="13. Object.create 有什么作用？兼容性如何？"></a>13. Object.create 有什么作用？兼容性如何？</h4><ul>
+<li>Object.create() 方法使用指定的原型对象和其属性创建了一个新的对象。<br><code>Object.create(proto, [ propertiesObject ])</code>(proto：新创建的对象的原型。)</li>
+<li>兼容性：<br><img src="https://leanote.com/api/file/getImage?fileId=58e31a8eab64413a3300b66f" alt="title"><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">function Person(name, age)&#123;</div><div class="line">    this.name = name</div><div class="line">    this.age = age</div><div class="line">&#125;</div><div class="line">Person.prototype.sayName = function()&#123;</div><div class="line">    console.log(this.name)</div><div class="line">&#125;</div><div class="line">function Male(name, age, sex)&#123;</div><div class="line">    Person.call(this, name, age)</div><div class="line">    this.sex = sex</div><div class="line">&#125;</div><div class="line">Male.prototype = Object.create(Person.prototype)</div><div class="line">Male.prototype.constructor = Male</div><div class="line">// Male.prototype = new Person() 不兼容Object.create()时使用</div><div class="line">Male.prototype.saySex = function()&#123;</div><div class="line">  console.log(this.sex)</div><div class="line">&#125;</div><div class="line">var p1 = new Male(&apos;jirengu&apos;, 3, &apos;male&apos;)</div><div class="line">p1.sayName() //jirengu</div><div class="line">p1.saySex() //male</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="14-hasOwnProperty有什么作用？-如何使用？"><a href="#14-hasOwnProperty有什么作用？-如何使用？" class="headerlink" title="14. hasOwnProperty有什么作用？ 如何使用？"></a>14. hasOwnProperty有什么作用？ 如何使用？</h4><ul>
+<li>hasOwnPerperty是Object.prototype的一个方法，会返回一个布尔值，可以判断一个对象是否包含自定义属性而不是原型链上的属性，hasOwnProperty是JavaScript中唯一一个处理属性但是不查找原型链的函数。<br><code>obj.hasOwnProperty(prop) //prop(要检测的属性)</code></li>
+<li>以上题中代码为例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">p1.hasOwnProperty(&apos;name&apos;) // true</div><div class="line">p1.hasOwnProperty(&apos;sayName&apos;) // false</div><div class="line">Male.prototype.hasOwnProperty(&apos;saySex&apos;) // true</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="15-如下代码中call的作用是什么"><a href="#15-如下代码中call的作用是什么" class="headerlink" title="15. 如下代码中call的作用是什么?"></a>15. 如下代码中call的作用是什么?</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function Person(name, sex)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.sex = sex;</div><div class="line">&#125;</div><div class="line">function Male(name, sex, age)&#123;</div><div class="line">    Person.call(this, name, sex);    //这里的 call 有什么作用</div><div class="line">    this.age = age;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>对象属性的获取是通过构造函数的执行，在一个类中执行另外一个类的构造函数，就可以把属性赋值到自己内部，但是需要把环境改到自己的作用域内，所以用到了call</li>
+<li>call的作用是在函数Male中执行构造函数Person，使Male函数能够执行Person上的初始化代码，实现构造函数继承，这样实例对象上就会有name和sex属性。</li>
+</ul>
+<h4 id="16-补全代码，实现继承"><a href="#16-补全代码，实现继承" class="headerlink" title="16. 补全代码，实现继承"></a>16. 补全代码，实现继承</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">function Person(name, sex)&#123;</div><div class="line">    this.name = name</div><div class="line">    this.sex = sex</div><div class="line">&#125;</div><div class="line"></div><div class="line">Person.prototype.getName = function()&#123;</div><div class="line">    console.log(this.name)</div><div class="line">&#125;;    </div><div class="line"></div><div class="line">function Male(name, sex, age)&#123;</div><div class="line">   Person.call(this, name, sex)</div><div class="line">   this.age = age</div><div class="line">&#125;</div><div class="line"></div><div class="line">Male.prototype = Object.create(Person.prototype)</div><div class="line">Male.prototype.constructor = Male</div><div class="line">Male.prototype.getAge = function()&#123;</div><div class="line">    console.log(this.age)</div><div class="line">&#125;;</div><div class="line"></div><div class="line">var ruoyu = new Male(&apos;若愚&apos;, &apos;男&apos;, 27)</div><div class="line">ruoyu.getName() //若愚</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -467,8 +486,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/13/Ajax/" rel="next" title="Ajax">
-                <i class="fa fa-chevron-left"></i> Ajax
+              <a href="/2017/05/15/对象-原型/" rel="next" title="对象&原型">
+                <i class="fa fa-chevron-left"></i> 对象&原型
               </a>
             
           </div>
@@ -476,10 +495,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/13/jQuery选择器-Dom操作-样式-事件处理/" rel="prev" title="jQuery选择器&Dom操作&样式&事件处理">
-                jQuery选择器&Dom操作&样式&事件处理 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -624,7 +639,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-什么是同源策略"><span class="nav-number">1.</span> <span class="nav-text">1. 什么是同源策略</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-什么是跨域？跨域有几种实现形式"><span class="nav-number">2.</span> <span class="nav-text">2. 什么是跨域？跨域有几种实现形式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-JSONP-的原理是什么"><span class="nav-number">3.</span> <span class="nav-text">3. JSONP 的原理是什么</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-CORS是什么"><span class="nav-number">4.</span> <span class="nav-text">4. CORS是什么</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#this-相关"><span class="nav-number">1.</span> <span class="nav-text">this 相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-apply、call-、bind有什么作用，什么区别"><span class="nav-number">1.1.</span> <span class="nav-text">1. apply、call 、bind有什么作用，什么区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-以下代码输出什么"><span class="nav-number">1.2.</span> <span class="nav-text">2. 以下代码输出什么?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-下面代码输出什么，为什么"><span class="nav-number">1.3.</span> <span class="nav-text">3. 下面代码输出什么，为什么</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-下面代码输出什么"><span class="nav-number">1.4.</span> <span class="nav-text">4. 下面代码输出什么</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-下面代码输出什么，why"><span class="nav-number">1.5.</span> <span class="nav-text">5. 下面代码输出什么，why</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-以下代码有什么问题，如何修改"><span class="nav-number">1.6.</span> <span class="nav-text">6. 以下代码有什么问题，如何修改</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原型链相关"><span class="nav-number">2.</span> <span class="nav-text">原型链相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-有如下代码，解释Person、-prototype、proto、p、constructor之间的关联。"><span class="nav-number">2.1.</span> <span class="nav-text">7. 有如下代码，解释Person、 prototype、proto、p、constructor之间的关联。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-上例中，对对象-p-可以这样调用-p-toString-。toString是哪里来的-画出原型图-并解释什么是原型链。"><span class="nav-number">2.2.</span> <span class="nav-text">8. 上例中，对对象 p 可以这样调用 p.toString()。toString是哪里来的? 画出原型图?并解释什么是原型链。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-对String做扩展，实现如下方式获取字符串中频率最高的字符"><span class="nav-number">2.3.</span> <span class="nav-text">9. 对String做扩展，实现如下方式获取字符串中频率最高的字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-instanceof有什么作用？内部逻辑是如何实现的？"><span class="nav-number">2.4.</span> <span class="nav-text">10. instanceof有什么作用？内部逻辑是如何实现的？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#继承相关"><span class="nav-number">3.</span> <span class="nav-text">继承相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#11-继承有什么作用"><span class="nav-number">3.1.</span> <span class="nav-text">11. 继承有什么作用?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#12-下面两种写法有什么区别"><span class="nav-number">3.2.</span> <span class="nav-text">12. 下面两种写法有什么区别?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#13-Object-create-有什么作用？兼容性如何？"><span class="nav-number">3.3.</span> <span class="nav-text">13. Object.create 有什么作用？兼容性如何？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#14-hasOwnProperty有什么作用？-如何使用？"><span class="nav-number">3.4.</span> <span class="nav-text">14. hasOwnProperty有什么作用？ 如何使用？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#15-如下代码中call的作用是什么"><span class="nav-number">3.5.</span> <span class="nav-text">15. 如下代码中call的作用是什么?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#16-补全代码，实现继承"><span class="nav-number">3.6.</span> <span class="nav-text">16. 补全代码，实现继承</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -756,9 +771,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/05/13/JSONP-跨域/';
-          this.page.identifier = '2017/05/13/JSONP-跨域/';
-          this.page.title = 'JSONP&跨域';
+          this.page.url = 'http://yoursite.com/2017/05/15/this-原型链-继承/';
+          this.page.identifier = '2017/05/15/this-原型链-继承/';
+          this.page.title = 'this&原型链&继承';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://.disqus.com/embed.js';

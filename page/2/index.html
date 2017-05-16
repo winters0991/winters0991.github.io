@@ -299,6 +299,357 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/13/闭包-定时器-BOM/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Winters">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/image/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Winters's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/13/闭包-定时器-BOM/" itemprop="url">闭包&定时器&BOM</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-13T14:58:26+08:00">
+                2017-05-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript入门/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript入门</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/13/闭包-定时器-BOM/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/05/13/闭包-定时器-BOM/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/05/13/闭包-定时器-BOM/" class="leancloud_visitors" data-flag-title="闭包&定时器&BOM">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="1-下面的代码输出多少？修改代码让fnArri-输出-i。使用两种以上的方法"><a href="#1-下面的代码输出多少？修改代码让fnArri-输出-i。使用两种以上的方法" class="headerlink" title="1. 下面的代码输出多少？修改代码让fnArri 输出 i。使用两种以上的方法"></a>1. 下面的代码输出多少？修改代码让fnArr<a href="">i</a> 输出 i。使用<strong>两种以上的</strong>方法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var fnArr = [];</div><div class="line">    for (var i = 0; i &lt; 10; i ++) &#123;</div><div class="line">        fnArr[i] =  function()&#123;</div><div class="line">    	    return i;</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">    console.log( fnArr[3]() );  // 输出：10 执行时循环结束i等于10，所以整个数组元素执行后都会是10</div></pre></td></tr></table></figure>
+<ul>
+<li><p>方法一：创建闭包，闭包内保存i</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var fnArr = [];</div><div class="line">    for (var i = 0; i &lt; 10; i ++) &#123;</div><div class="line">      (function ()&#123;</div><div class="line">        var n = i;</div><div class="line">        fnArr[i] =  function()&#123;</div><div class="line">    	    return n;</div><div class="line">        &#125;;</div><div class="line">      &#125;)();   </div><div class="line">    &#125;</div><div class="line">    console.log( fnArr[3]() );// 3</div></pre></td></tr></table></figure>
+</li>
+<li><p>方法二：立即执行函数</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var fnArr = [];</div><div class="line">    for (var i = 0; i &lt; 10; i ++) &#123;</div><div class="line">        fnArr[i] = (function()&#123;</div><div class="line">          var n = i;</div><div class="line">    	  return function()&#123;</div><div class="line">            return n;</div><div class="line">          &#125;;  </div><div class="line">        &#125;)(); </div><div class="line">    &#125;</div><div class="line">    console.log( fnArr[3]() );// 3</div><div class="line"></div><div class="line">``</div></pre></td></tr></table></figure>
+<h4 id="2-封装一个汽车对象，可以通过如下方式获取汽车状态"><a href="#2-封装一个汽车对象，可以通过如下方式获取汽车状态" class="headerlink" title="2. 封装一个汽车对象，可以通过如下方式获取汽车状态"></a>2. 封装一个汽车对象，可以通过如下方式获取汽车状态</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">var Car = (function()&#123;</div><div class="line">   var speed = 0;</div><div class="line">   function setSpeed(s)&#123;</div><div class="line">       speed = s;</div><div class="line">   &#125;</div><div class="line">   function getSpeed()&#123;</div><div class="line">       return speed;</div><div class="line">   &#125;</div><div class="line">   function accelerate()&#123;</div><div class="line">       speed += 10;</div><div class="line">   &#125;</div><div class="line">   function decelerate()&#123;</div><div class="line">       if(speed &gt;= 10)&#123;</div><div class="line">         speed -= 10;</div><div class="line">       &#125;</div><div class="line">   &#125;</div><div class="line">   function getStatus()&#123;</div><div class="line">       if(speed &gt; 0)&#123;</div><div class="line">         return &apos;running&apos;;</div><div class="line">       &#125;else&#123;</div><div class="line">         return &apos;stop&apos;;</div><div class="line">       &#125;</div><div class="line">   &#125;</div><div class="line">   return &#123;</div><div class="line">       setSpeed: setSpeed,</div><div class="line">       getSpeed: getSpeed,</div><div class="line">       accelerate: accelerate,</div><div class="line">       decelerate: decelerate,</div><div class="line">       getStatus: getStatus</div><div class="line">   &#125;;</div><div class="line">&#125;)();</div><div class="line">Car.setSpeed(30);</div><div class="line">Car.getSpeed(); //30</div><div class="line">Car.accelerate();</div><div class="line">Car.getSpeed(); //40;</div><div class="line">Car.decelerate();</div><div class="line">Car.decelerate();</div><div class="line">Car.getSpeed(); //20</div><div class="line">Car.getStatus(); // &apos;running&apos;;</div><div class="line">Car.decelerate(); </div><div class="line">Car.decelerate();</div><div class="line">Car.getStatus();  //&apos;stop&apos;;</div><div class="line">//Car.speed;  //error</div></pre></td></tr></table></figure>
+<h4 id="3-下面这段代码输出结果是-为什么"><a href="#3-下面这段代码输出结果是-为什么" class="headerlink" title="3. 下面这段代码输出结果是? 为什么?"></a>3. 下面这段代码输出结果是? 为什么?</h4>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/13/闭包-定时器-BOM/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/12/事件/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Winters">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/image/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Winters's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/12/事件/" itemprop="url">事件</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-12T22:33:55+08:00">
+                2017-05-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript入门/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript入门</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/12/事件/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/05/12/事件/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/05/12/事件/" class="leancloud_visitors" data-flag-title="事件">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="1-DOM0-事件和DOM2级在事件监听使用方式上有什么区别？"><a href="#1-DOM0-事件和DOM2级在事件监听使用方式上有什么区别？" class="headerlink" title="1. DOM0 事件和DOM2级在事件监听使用方式上有什么区别？"></a>1. DOM0 事件和DOM2级在事件监听使用方式上有什么区别？</h4><ul>
+<li><p>DOM0：把一个方法赋值给一个元素的事件处理程序属性，这样处理，事件处理程序被认为是元素的方法，事件处理程序在元素的作用域下运行，this就是当前元素。这样的缺陷是：同一个事件只能有一个事件监听函数，再次添加会产生覆盖。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var btnClick = document.getElementById(&apos;btnClick&apos;);</div><div class="line">btnClick.onclick = function handler() &#123;</div><div class="line">    alert(this.id);</div><div class="line">&#125;; //bthClick</div></pre></td></tr></table></figure>
+</li>
+<li><p>DOM2：这种方式可以给一个同一个元素添加多个处理事件，同时它的this也指向元素本身。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var btnClick = document.getElementById(&apos;btnClick&apos;);</div><div class="line">btnClick.addEventListener(&apos;click&apos;, function() &#123;</div><div class="line">    alert(this.id);</div><div class="line">&#125;, false); //btnClick</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="2-attachEvent与addEventListener的区别？"><a href="#2-attachEvent与addEventListener的区别？" class="headerlink" title="2. attachEvent与addEventListener的区别？"></a>2. attachEvent与addEventListener的区别？</h4><ul>
+<li><strong>适用浏览器不同</strong>：attachEvent是IE的事件处理方法，addEventListener是标准浏览器的处理方式。</li>
+<li><strong>参数个数不相同</strong>：addEventListener有三个参数，attachEvent只有两个，attachEvent添加的事件处理程序只能发生在冒泡阶段，addEventListener第三个参数可以决定添加的事件处理程序是在捕获阶段还是冒泡阶段处理。</li>
+<li><strong>第一个参数意义不同</strong>：addEventListener第一个参数是事件类型（比如click，load），而attachEvent第一个参数指明的是事件处理函数名称（onclick，onload）。</li>
+<li><strong>事件处理程序的作用域不相同</strong>：addEventListener的作用域是元素本身，this是指的触发元素，而attachEvent事件处理程序会在全局变量内运行，this是window。</li>
+<li><strong>为一个事件添加多个事件处理程序时，执行顺序不同</strong>：addEventListener添加会按照添加顺序执行，而attachEvent添加多个事件处理程序时顺序无规律。</li>
+</ul>
+<h4 id="3-解释IE事件冒泡和DOM2事件传播机制？"><a href="#3-解释IE事件冒泡和DOM2事件传播机制？" class="headerlink" title="3. 解释IE事件冒泡和DOM2事件传播机制？"></a>3. 解释IE事件冒泡和DOM2事件传播机制？</h4><ul>
+<li><p>IE的事件冒泡：事件开始时由最具体的元素接收，然后逐级向上传播到较为不具体的元素。</p>
+</li>
+<li><p>DOM2：DOM2级事件规定事件流包括三个阶段，事件捕获阶段，处于目标阶段，事件冒泡阶段，首先发生的是事件捕获，为截取事件提供机会，然后是实际目标接收事件，最后是冒泡阶段。</p>
+</li>
+</ul>
+<h4 id="4-如何阻止事件冒泡？-如何阻止默认事件？"><a href="#4-如何阻止事件冒泡？-如何阻止默认事件？" class="headerlink" title="4. 如何阻止事件冒泡？ 如何阻止默认事件？"></a>4. 如何阻止事件冒泡？ 如何阻止默认事件？</h4>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/12/事件/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/12/DOM操作/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1134,381 +1485,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/10/函数与作用域/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Winters">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/image/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Winters's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/10/函数与作用域/" itemprop="url">函数与作用域</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-10T16:48:49+08:00">
-                2017-05-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript入门/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript入门</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/05/10/函数与作用域/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/10/函数与作用域/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/05/10/函数与作用域/" class="leancloud_visitors" data-flag-title="函数与作用域">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="1-函数声明和函数表达式有什么区别"><a href="#1-函数声明和函数表达式有什么区别" class="headerlink" title="1. 函数声明和函数表达式有什么区别"></a>1. 函数声明和函数表达式有什么区别</h4><ul>
-<li><p>函数声明必须带有标示符（Identifier）（即函数名称），而函数表达式则可以省略这个标示符。</p>
-<p>函数声明:<code>function functionName(){}</code></p>
-<p><code>function 函数名称 (参数：可选){ 函数体 }</code><br>函数表达式：<code>var fn = function(){}</code><br><code>function 函数名称（可选）(参数：可选){ 函数体 }</code></p>
-</li>
-<li>函数声明语句中的函数名是一个变量名，变量指向函数对象。<br>函数定义表达式和通过var声明变量一样，其函数被提前到了脚本或函数的顶部，因此它在整个脚本和或函数内都是可见的。这样的话，只有函数变量声明提前了，函数的初始化代码仍然在原来的位置。但是使用函数声明的话，函数名称和函数体均提前了，即脚本中的函数和函数中嵌套的函数都会在当前上下文中其它代码之前声明，也即可以在声明一个函数之前调用它。</li>
-</ul>
-<h4 id="2-什么是变量的声明前置？什么是函数的声明前置"><a href="#2-什么是变量的声明前置？什么是函数的声明前置" class="headerlink" title="2. 什么是变量的声明前置？什么是函数的声明前置"></a>2. 什么是变量的声明前置？什么是函数的声明前置</h4><ul>
-<li>变量声明前置：JavaScript引擎的工作方式是，先解析代码，获取所有被声明的变量，然后再一行一行地运行。这造成的结果，就是所有的变量的声明语句，都会被提升到代码的头部。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">console.log(a);</div><div class="line">var a = 1;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>即<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a;</div><div class="line">console.log(a);</div><div class="line">a = 1;</div></pre></td></tr></table></figure></p>
-<ul>
-<li>函数声明前置：JavaScript引擎将函数名视同变量名，所以采用function命令声明函数时，整个函数会像变量声明一样，被提升到代码头部。所以，下面的代码不会报错。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">f();</div><div class="line">function f() &#123;&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="3-arguments-是什么"><a href="#3-arguments-是什么" class="headerlink" title="3. arguments 是什么"></a>3. arguments 是什么</h4>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/10/函数与作用域/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/10/数据类型-运算符-流程控制语句/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Winters">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/image/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Winters's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/10/数据类型-运算符-流程控制语句/" itemprop="url">数据类型&运算符&流程控制语句</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-10T12:13:47+08:00">
-                2017-05-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript入门/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript入门</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/05/10/数据类型-运算符-流程控制语句/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/10/数据类型-运算符-流程控制语句/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/05/10/数据类型-运算符-流程控制语句/" class="leancloud_visitors" data-flag-title="数据类型&运算符&流程控制语句">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="1-JavaScript定义了几种数据类型-哪些是原始类型-哪些是复杂类型-原始类型和复杂类型的区别是什么"><a href="#1-JavaScript定义了几种数据类型-哪些是原始类型-哪些是复杂类型-原始类型和复杂类型的区别是什么" class="headerlink" title="1. JavaScript定义了几种数据类型?哪些是原始类型?哪些是复杂类型?原始类型和复杂类型的区别是什么?"></a>1. JavaScript定义了几种数据类型?哪些是原始类型?哪些是复杂类型?原始类型和复杂类型的区别是什么?</h4><ul>
-<li><p>JavaScript的数据类型，共有六种。</p>
-<ol>
-<li>数值（number）：整数和小数</li>
-<li>字符串（string）：字符组成的文本</li>
-<li>布尔值（boolean）：true（真）和false（假）两个特定值</li>
-<li>undefined：表示“未定义”或不存在，即此处目前没有任何值</li>
-<li>null：表示空缺，即此处应该有一个值，但目前为空</li>
-<li><p>对象（object）：各种值组成的集合，又可以分为以下子类型：</p>
-<ul>
-<li>狭义的对象（object）</li>
-<li>数组（array）</li>
-<li>函数（function）</li>
-<li>正则表达式（regexp）</li>
-</ul>
-</li>
-<li>Symbol：生成一个全局唯一的值。</li>
-</ol>
-</li>
-<li>原始类型（primitive type）的值：数值、字符串、布尔值，它们是最基本的数据类型，不能再细分了。</li>
-<li>复杂类型（complex type）的值：对象，对象往往是多个原始类型的值的合成，可以看作是一个存放各种值的容器。</li>
-<li>特殊值：undefined和null。</li>
-<li>原始类型和复杂类型的区别:<ol>
-<li>基本类型变量存的是值，复杂类型的变量存的是内存地址。</li>
-<li>基本类型在赋值的时候拷贝值，复杂类型在赋值的时候只拷贝地址，不拷贝值。</li>
-</ol>
-</li>
-</ul>
-<h4 id="2-typeof和instanceof的作用和区别"><a href="#2-typeof和instanceof的作用和区别" class="headerlink" title="2. typeof和instanceof的作用和区别?"></a>2. typeof和instanceof的作用和区别?</h4><ol>
-<li>typeof运算符可以返回一个值的数据类型，可能有以下结果:<ul>
-<li>数值、字符串、布尔值分别返回number、string、boolean。</li>
-<li>函数返回function。</li>
-<li>undefined返回undefined。</li>
-<li>typeof可以用来检查一个没有声明的变量，而不报错。实际编程中，这个特点通常用在判断语句。</li>
-<li>除此以外，其他情况都返回object。</li>
-</ul>
-</li>
-<li>如果我们希望获取一个对象是否是数组，或判断某个变量是否是某个对象的实例则要选择使用instanceof。instanceof通过返回一个布尔值来判断一个变量是否某个对象的实例。</li>
-</ol>
-<h4 id="3-如何判断一个变量是否是数字、字符串、布尔、函数"><a href="#3-如何判断一个变量是否是数字、字符串、布尔、函数" class="headerlink" title="3. 如何判断一个变量是否是数字、字符串、布尔、函数"></a>3. 如何判断一个变量是否是数字、字符串、布尔、函数</h4>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/10/数据类型-运算符-流程控制语句/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1558,7 +1534,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
