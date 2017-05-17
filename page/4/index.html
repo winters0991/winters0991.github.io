@@ -299,6 +299,1122 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/10/数据类型-运算符-流程控制语句/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Winters">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/image/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Winters's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/10/数据类型-运算符-流程控制语句/" itemprop="url">数据类型&运算符&流程控制语句</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-10T12:13:47+08:00">
+                2017-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript入门/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript入门</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/10/数据类型-运算符-流程控制语句/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/05/10/数据类型-运算符-流程控制语句/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/05/10/数据类型-运算符-流程控制语句/" class="leancloud_visitors" data-flag-title="数据类型&运算符&流程控制语句">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="1-JavaScript定义了几种数据类型-哪些是原始类型-哪些是复杂类型-原始类型和复杂类型的区别是什么"><a href="#1-JavaScript定义了几种数据类型-哪些是原始类型-哪些是复杂类型-原始类型和复杂类型的区别是什么" class="headerlink" title="1. JavaScript定义了几种数据类型?哪些是原始类型?哪些是复杂类型?原始类型和复杂类型的区别是什么?"></a>1. JavaScript定义了几种数据类型?哪些是原始类型?哪些是复杂类型?原始类型和复杂类型的区别是什么?</h4><ul>
+<li><p>JavaScript的数据类型，共有六种。</p>
+<ol>
+<li>数值（number）：整数和小数</li>
+<li>字符串（string）：字符组成的文本</li>
+<li>布尔值（boolean）：true（真）和false（假）两个特定值</li>
+<li>undefined：表示“未定义”或不存在，即此处目前没有任何值</li>
+<li>null：表示空缺，即此处应该有一个值，但目前为空</li>
+<li><p>对象（object）：各种值组成的集合，又可以分为以下子类型：</p>
+<ul>
+<li>狭义的对象（object）</li>
+<li>数组（array）</li>
+<li>函数（function）</li>
+<li>正则表达式（regexp）</li>
+</ul>
+</li>
+<li>Symbol：生成一个全局唯一的值。</li>
+</ol>
+</li>
+<li>原始类型（primitive type）的值：数值、字符串、布尔值，它们是最基本的数据类型，不能再细分了。</li>
+<li>复杂类型（complex type）的值：对象，对象往往是多个原始类型的值的合成，可以看作是一个存放各种值的容器。</li>
+<li>特殊值：undefined和null。</li>
+<li>原始类型和复杂类型的区别:<ol>
+<li>基本类型变量存的是值，复杂类型的变量存的是内存地址。</li>
+<li>基本类型在赋值的时候拷贝值，复杂类型在赋值的时候只拷贝地址，不拷贝值。</li>
+</ol>
+</li>
+</ul>
+<h4 id="2-typeof和instanceof的作用和区别"><a href="#2-typeof和instanceof的作用和区别" class="headerlink" title="2. typeof和instanceof的作用和区别?"></a>2. typeof和instanceof的作用和区别?</h4><ol>
+<li>typeof运算符可以返回一个值的数据类型，可能有以下结果:<ul>
+<li>数值、字符串、布尔值分别返回number、string、boolean。</li>
+<li>函数返回function。</li>
+<li>undefined返回undefined。</li>
+<li>typeof可以用来检查一个没有声明的变量，而不报错。实际编程中，这个特点通常用在判断语句。</li>
+<li>除此以外，其他情况都返回object。</li>
+</ul>
+</li>
+<li>如果我们希望获取一个对象是否是数组，或判断某个变量是否是某个对象的实例则要选择使用instanceof。instanceof通过返回一个布尔值来判断一个变量是否某个对象的实例。</li>
+</ol>
+<h4 id="3-如何判断一个变量是否是数字、字符串、布尔、函数"><a href="#3-如何判断一个变量是否是数字、字符串、布尔、函数" class="headerlink" title="3. 如何判断一个变量是否是数字、字符串、布尔、函数"></a>3. 如何判断一个变量是否是数字、字符串、布尔、函数</h4>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/10/数据类型-运算符-流程控制语句/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/09/JS基本概念/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Winters">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/image/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Winters's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/09/JS基本概念/" itemprop="url">JS相关概念</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-09T16:47:29+08:00">
+                2017-05-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript入门/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript入门</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/09/JS基本概念/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/05/09/JS基本概念/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/05/09/JS基本概念/" class="leancloud_visitors" data-flag-title="JS相关概念">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="1-CSS和JS在网页中的放置顺序是怎样的？"><a href="#1-CSS和JS在网页中的放置顺序是怎样的？" class="headerlink" title="1. CSS和JS在网页中的放置顺序是怎样的？"></a>1. CSS和JS在网页中的放置顺序是怎样的？</h4><ul>
+<li>一般将css放置head里用style包裹，也可以使用link标签引入。</li>
+<li>js使用script标签引入且一般放置在body闭合标签之前。</li>
+</ul>
+<h4 id="2-解释白屏和FOUC"><a href="#2-解释白屏和FOUC" class="headerlink" title="2. 解释白屏和FOUC"></a>2. 解释白屏和FOUC</h4><p>1.白屏</p>
+<ul>
+<li>如果把样式放在底部，对于IE浏览器，chrome等（CSS全部加载后再呈现,有可能等待时间长），在某些场景下(新窗口打开，刷新等)页面会出现白屏，而不是内容逐步展现。</li>
+<li>使用@import标签，即使CSS放入link, 并且放在头部,也可能出现白屏。</li>
+<li>对于图片和CSS, 在加载时会并发加载(如一个域名下同时加载两个文件)。 但在加载JavaScript时，会禁用并发，并且阻止其他内容的下载。所以把JavaScript放入页面顶部也会导致白屏现象。</li>
+</ul>
+<p>2.FOUC </p>
+<ul>
+<li>Flash of Unstyled Content “无样式内容闪烁“：有些浏览器是边渲染边呈现，CSS放置body标签底部，会出现加载html结束后才一次性加载css样式，从而导致页面闪烁。</li>
+</ul>
+<h4 id="3-async和defer的作用是什么？有什么区别"><a href="#3-async和defer的作用是什么？有什么区别" class="headerlink" title="3. async和defer的作用是什么？有什么区别"></a>3. async和defer的作用是什么？有什么区别</h4>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/09/JS基本概念/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/09/CSS规范-垂直居中/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Winters">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/image/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Winters's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/09/CSS规范-垂直居中/" itemprop="url">CSS规范&垂直居中</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-09T16:32:44+08:00">
+                2017-05-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS入门/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS入门</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/09/CSS规范-垂直居中/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/05/09/CSS规范-垂直居中/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/05/09/CSS规范-垂直居中/" class="leancloud_visitors" data-flag-title="CSS规范&垂直居中">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="1-说一说你平时写代码遵守的编码规范"><a href="#1-说一说你平时写代码遵守的编码规范" class="headerlink" title="1. 说一说你平时写代码遵守的编码规范"></a>1. 说一说你平时写代码遵守的编码规范</h4><ol>
+<li>关于命名<ul>
+<li>语义化标签优先</li>
+<li>命名体现功能，不涉及表现样式(颜色、字体、边框、背景等)</li>
+<li>所有命名都使用英文小写</li>
+<li>命名用引号包裹</li>
+<li>用中横线连接</li>
+</ul>
+</li>
+<li>关于html与css<ul>
+<li>嵌套元素应当缩进一次（即两个空格）</li>
+<li>减少标签的数量</li>
+<li>为选择器分组时，将单独的选择器单独放在一行。</li>
+<li>css的 :后加个空格， {前加个空格</li>
+<li>每条声明后都加上分号</li>
+<li>换行，而不是放到一行</li>
+<li>颜色用小写，用缩写, #fff</li>
+<li>小数不用写前缀, 0.5s -&gt; .5s；0不用加单位</li>
+<li>尽量缩写， margin: 5px 10px 5px 10px -&gt; margin: 5px 10px</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><a href="http://codeguide.bootcss.com/" target="_blank" rel="external">遵守编码规范bootstrap</a></li>
+</ul>
+<h4 id="2-垂直居中有几种实现方式，给出代码范例"><a href="#2-垂直居中有几种实现方式，给出代码范例" class="headerlink" title="2. 垂直居中有几种实现方式，给出代码范例"></a>2. 垂直居中有几种实现方式，给出代码范例</h4><ol>
+<li>height=line-height实现单行文本垂直居中： <a href="http://js.jirengu.com/limopipovu/3/edit" target="_blank" rel="external">demo</a></li>
+<li>利用padding值相等实现：<a href="http://js.jirengu.com/yuhududupe/3/edit" target="_blank" rel="external">demo</a></li>
+<li><p>绝对定位</p>
+<ul>
+<li>利用负margin <a href="http://js.jirengu.com/topumimani/4/edit" target="_blank" rel="external">demo</a></li>
+<li>利用transform <a href="http://js.jirengu.com/nunaficufi/4/edit" target="_blank" rel="external">demo</a></li>
+<li>利用margin: auto <a href="http://js.jirengu.com/topumimani/10/edit" target="_blank" rel="external">demo</a></li>
+</ul>
+</li>
+<li><p>vertical-align: middle <a href="http://js.jirengu.com/vituziniju/3/edit" target="_blank" rel="external">demo</a></p>
+</li>
+<li>dispaly: table-cell <a href="http://js.jirengu.com/batewikode/6/edit" target="_blank" rel="external">demo</a></li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/09/CSS布局/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Winters">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/image/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Winters's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/09/CSS布局/" itemprop="url">浏览器兼容</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-09T13:01:55+08:00">
+                2017-05-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS入门/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS入门</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/09/CSS布局/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/05/09/CSS布局/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/05/09/CSS布局/" class="leancloud_visitors" data-flag-title="浏览器兼容">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="1-什么是-CSS-hack"><a href="#1-什么是-CSS-hack" class="headerlink" title="1. 什么是 CSS hack"></a>1. 什么是 CSS hack</h4><ul>
+<li>由于不同厂商的浏览器或某浏览器的不同版本（如IE6-IE11/Firefox/Safari/Opera/Chrome等），对CSS的支持、解析不一样，导致在不同浏览器的环境中呈现出不一致的页面展现效果。这时为了获得统一的页面效果，就需要针对不同的浏览器或不同版本写特定的CSS样式，我们把这个针对不同的浏览器或不同版本写相应的CSS code的过程，叫做CSS hack。</li>
+<li>CSS hack大致有3种表现形式，CSS属性前缀法、选择器前缀法以及IE条件注释法（即HTML头部引用if IE）hack，实际项目中CSS hack大部分是针对IE浏览器不同版本之间的表现差异而引入的。</li>
+</ul>
+<h4 id="2-谈一谈浏览器兼容的思路"><a href="#2-谈一谈浏览器兼容的思路" class="headerlink" title="2. 谈一谈浏览器兼容的思路"></a>2. 谈一谈浏览器兼容的思路</h4><ol>
+<li>要不要做？<ul>
+<li>产品的角度（产品的受众、受众的浏览器比例、效果优先还是基本功能优先）</li>
+<li>成本的角度 (有无必要做)</li>
+</ul>
+</li>
+<li>做到什么程度？<ul>
+<li>让哪些浏览器支持哪些效果</li>
+</ul>
+</li>
+<li>如何做？<ul>
+<li>明确效果是要优雅降级还是渐进增强：<br>1.渐进增强(progressive enhancement): 针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。<br>2.优雅降级 (graceful degradation): 一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。</li>
+<li>根据兼容需求选择技术框架/库(jquery)</li>
+<li>根据兼容需求选择兼容工具(html5shiv.js、respond.js、css reset、normalize.css、Modernizr)</li>
+<li>postCSS</li>
+<li>条件注释、CSS Hack、js 能力检测做一些修补</li>
+</ul>
+</li>
+</ol>
+<h4 id="3-列举5种以上浏览器兼容的写法"><a href="#3-列举5种以上浏览器兼容的写法" class="headerlink" title="3. 列举5种以上浏览器兼容的写法"></a>3. 列举5种以上浏览器兼容的写法</h4>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/09/CSS布局/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/09/浮动定位-BFC-边距合并/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Winters">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/image/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Winters's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/09/浮动定位-BFC-边距合并/" itemprop="url">浮动定位&BFC&边距合并</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-09T12:55:32+08:00">
+                2017-05-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS入门/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS入门</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/09/浮动定位-BFC-边距合并/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/05/09/浮动定位-BFC-边距合并/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/05/09/浮动定位-BFC-边距合并/" class="leancloud_visitors" data-flag-title="浮动定位&BFC&边距合并">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="1-浮动元素有什么特征？对父容器、其他浮动元素、普通元素、文字分别有什么影响"><a href="#1-浮动元素有什么特征？对父容器、其他浮动元素、普通元素、文字分别有什么影响" class="headerlink" title="1. 浮动元素有什么特征？对父容器、其他浮动元素、普通元素、文字分别有什么影响?"></a>1. 浮动元素有什么特征？对父容器、其他浮动元素、普通元素、文字分别有什么影响?</h4><ul>
+<li>浮动元素会脱离正常的文档流，使其浮动到父元素的行的一端(元素向左或向右移动，直到碰到浮动元素，或者达到父元素内容的边界，不包括padding)，并且其他元素将忽略该浮动元素并填补其原先的空间。</li>
+<li>对父容器的影响：元素浮动后，会脱离正常文档流，在原文档中，该浮动元素似乎消失了，因此它不能撑开父元素，容易造成父元素的塌陷。</li>
+<li>对其他浮动元素的影响：<br>若是同一方向浮动：兄弟元素相对该浮动元素按照从左到右(float:left)或者从右到左(float:right)的顺序依次排列。<br>若是反方向浮动：兄弟元素和浮动元素将组成两个向左或向右的浮动队列，分别相对浮动方向同时向行中间浮动。他们尽可能处于同一行，如果行的宽度不足以容纳这两个队列，两个队列将错开成两行。</li>
+<li>对普通元素的影响：<br>若是块级元素：该块级元素会忽视浮动元素而占据它的位置，并且该块级元素会处于浮动元素的下层(并且无法通过z-index属性改变他们的层叠关系)，然而它的内容文字和其他行内元素将会环绕浮动元素。<br>若是内联元素：内联元素将环绕浮动元素排列。</li>
+<li>对文字的影响：文字将环绕浮动元素排列。</li>
+</ul>
+<h4 id="2-清除浮动指什么-如何清除浮动-两种以上方法"><a href="#2-清除浮动指什么-如何清除浮动-两种以上方法" class="headerlink" title="2. 清除浮动指什么? 如何清除浮动? 两种以上方法"></a>2. 清除浮动指什么? 如何清除浮动? 两种以上方法</h4><ul>
+<li>清理浮动指解决float所导致的父元素塌陷问题。</li>
+<li>清除浮动方法：</li>
+</ul>
+<ol>
+<li>设置clear属性</li>
+<li>父元素形成BFC，设置的方法有：<ul>
+<li>float: left/right</li>
+<li>overflow: hidden/auto/scroll</li>
+<li>display: table-cell/table-caption/inline-block</li>
+<li>position: absolute/fixed</li>
+</ul>
+</li>
+<li>相对较好的方法：设置伪元素</li>
+</ol>
+<ul>
+<li>方法一：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.clearfix&#123;</div><div class="line">     *zoom:1;</div><div class="line"> &#125;</div><div class="line">.clearfix:after&#123;</div><div class="line">     content:&quot;&quot;;</div><div class="line">     display:block;</div><div class="line">     clear:both;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>方法二：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.clearfix&#123;</div><div class="line">   *zoom:1;</div><div class="line"> &#125;</div><div class="line">.clearfix:after&#123;</div><div class="line">     content:&quot;&quot;;</div><div class="line">     display:table;</div><div class="line">     clear:both;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<h4 id="3-有几种定位方式，分别是如何实现定位的，参考点是什么，使用场景是什么？"><a href="#3-有几种定位方式，分别是如何实现定位的，参考点是什么，使用场景是什么？" class="headerlink" title="3. 有几种定位方式，分别是如何实现定位的，参考点是什么，使用场景是什么？"></a>3. 有几种定位方式，分别是如何实现定位的，参考点是什么，使用场景是什么？</h4>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/09/浮动定位-BFC-边距合并/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/09/CSS常见样式2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Winters">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/image/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Winters's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/09/CSS常见样式2/" itemprop="url">CSS常见样式2</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-09T09:40:57+08:00">
+                2017-05-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS入门/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS入门</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/09/CSS常见样式2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/05/09/CSS常见样式2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/05/09/CSS常见样式2/" class="leancloud_visitors" data-flag-title="CSS常见样式2">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="1-盒模型包括哪些属性"><a href="#1-盒模型包括哪些属性" class="headerlink" title="1. 盒模型包括哪些属性"></a>1. 盒模型包括哪些属性</h4><ul>
+<li>content(内容)</li>
+<li>padding(内边距)</li>
+<li>border(边框)</li>
+<li>margin(外边距)<br><img src="https://leanote.com/api/file/getImage?fileId=58690b4dab64415e430046b7" alt="title"></li>
+</ul>
+<hr>
+<h4 id="2-text-align-center的作用是什么，作用在什么元素上？能让什么元素水平居中"><a href="#2-text-align-center的作用是什么，作用在什么元素上？能让什么元素水平居中" class="headerlink" title="2. text-align: center的作用是什么，作用在什么元素上？能让什么元素水平居中"></a>2. text-align: center的作用是什么，作用在什么元素上？能让什么元素水平居中</h4><ul>
+<li>作用于块级元素，可以使块级元素中的inline、inline-block及文本水平居中</li>
+</ul>
+<hr>
+<h4 id="3-IE盒模型和W3C盒模型有什么区别"><a href="#3-IE盒模型和W3C盒模型有什么区别" class="headerlink" title="3. IE盒模型和W3C盒模型有什么区别?"></a>3. IE盒模型和W3C盒模型有什么区别?</h4><ul>
+<li>IE盒模型(怪异模式)：width=content+padding+border</li>
+<li>W3C标准盒模型：width=content</li>
+<li>IE678版本在不添加doctype时为怪异模式，添加doctype变成标准模式</li>
+<li>使用box-sizing:border-box进行盒模型模式切换<br><img src="https://leanote.com/api/file/getImage?fileId=58690b5aab644160be0048c4" alt="title"></li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/09/CSS常见样式2/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/08/CSS常见样式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -470,880 +1586,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/08/CSS选择器/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Winters">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/image/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Winters's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/08/CSS选择器/" itemprop="url">CSS选择器</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-08T21:08:09+08:00">
-                2017-05-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS入门/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS入门</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/05/08/CSS选择器/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/08/CSS选择器/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/05/08/CSS选择器/" class="leancloud_visitors" data-flag-title="CSS选择器">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="1-class-和-id-的使用场景"><a href="#1-class-和-id-的使用场景" class="headerlink" title="1. class 和 id 的使用场景?"></a>1. class 和 id 的使用场景?</h4><ul>
-<li>class: 标签的类名，具有普遍性，不唯一，可重复使用，所以尽量在结构内部使用，通常用于样式定义</li>
-<li>id: 指定标签的唯一标识，具有唯一性，所以尽量在结构外围使用，通常用于页面布局</li>
-<li>id的样式优先级高于class</li>
-</ul>
-<h4 id="2-CSS选择器常见的有几种"><a href="#2-CSS选择器常见的有几种" class="headerlink" title="2. CSS选择器常见的有几种?"></a>2. CSS选择器常见的有几种?</h4><ol>
-<li>基本选择器</li>
-</ol>
-<ul>
-<li>通配选择器 <code>*</code></li>
-<li>元素选择器 <code>Element</code></li>
-<li>ID选择器 <code>#id</code></li>
-<li>类选择器 <code>.class</code></li>
-</ul>
-<ol>
-<li>组合选择器</li>
-</ol>
-<ul>
-<li>多元素选择器 <code>E,F</code></li>
-<li>后代选择器 <code>E F</code></li>
-<li>子选择器 <code>E&gt;F</code></li>
-<li>相邻兄弟选择器 <code>E+F</code></li>
-<li>通用兄弟选择器 <code>E~F</code></li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/08/CSS选择器/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/08/line-height-a标签/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Winters">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/image/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Winters's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/08/line-height-a标签/" itemprop="url">line-height & a 标签</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-08T19:40:52+08:00">
-                2017-05-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS入门/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS入门</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/05/08/line-height-a标签/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/08/line-height-a标签/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/05/08/line-height-a标签/" class="leancloud_visitors" data-flag-title="line-height & a 标签">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="1-line-height有什么作用-line-height-2和line-height-200-有什么区别"><a href="#1-line-height有什么作用-line-height-2和line-height-200-有什么区别" class="headerlink" title="1. line-height有什么作用?line-height: 2和line-height: 200%有什么区别?"></a>1. line-height有什么作用?line-height: 2和line-height: 200%有什么区别?</h4><ul>
-<li>设置行高</li>
-<li>实现单行文本的垂直居中</li>
-<li><p><a href="http://www.zhangxinxu.com/wordpress/2009/11/css%E8%A1%8C%E9%AB%98line-height%E7%9A%84%E4%B8%80%E4%BA%9B%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E5%8F%8A%E5%BA%94%E7%94%A8/?_t_t_t=0.558901297625001" target="_blank" rel="external">line-height详细用法</a></p>
-</li>
-<li><p>取值为数字时：行高=子元素字体大小*数字</p>
-</li>
-<li>取值为百分比时：行高=父元素字体大小*百分比</li>
-</ul>
-<h4 id="2-如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？"><a href="#2-如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？" class="headerlink" title="2. 如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？"></a>2. 如何去查CSS属性的兼容性？比如inline-block哪些浏览器支持？</h4><ul>
-<li><a href="http://caniuse.com/" target="_blank" rel="external">查询兼容性网址Can I Use</a></li>
-<li><img src="https://leanote.com/api/file/getImage?fileId=5858a08bab64416d760120d9" alt="title"></li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/08/line-height-a标签/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/07/CSS基础/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Winters">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/image/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Winters's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/07/CSS基础/" itemprop="url">CSS基础</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-07T18:02:28+08:00">
-                2017-05-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS入门/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS入门</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/05/07/CSS基础/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/07/CSS基础/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/05/07/CSS基础/" class="leancloud_visitors" data-flag-title="CSS基础">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="1-样式有几种引入方式"><a href="#1-样式有几种引入方式" class="headerlink" title="1. 样式有几种引入方式?"></a>1. 样式有几种引入方式?</h4><ul>
-<li><p>内联方式<br>内联方式指的是直接在HTML标签中的style属性中添加CSS。<br>示例：<br><code>&lt;div style=&quot;background: red&quot;&gt;&lt;/div&gt;</code></p>
-</li>
-<li><p>嵌入方式<br>嵌入方式指的是在HTML<code>&lt;head&gt;</code>标签中的<code>&lt;style&gt;</code>标签下书写 CSS 代码。<br>示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;head&gt;</div><div class="line">    &lt;style&gt;</div><div class="line">    .content &#123;</div><div class="line">        background: red;</div><div class="line">    &#125;</div><div class="line">    &lt;/style&gt;</div><div class="line">&lt;/head&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>链接方式<br>链接方式指的是使用HTML头部的<code>&lt;head&gt;</code>标签引入外部的CSS文件。<br>示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;head&gt;</div><div class="line">    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt;</div><div class="line">&lt;/head&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>导入方式<br>导入方式指的是使用CSS规则引入外部CSS文件。<br>示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">    @import url(style.css);</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/07/CSS基础/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/07/Form表单/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Winters">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/image/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Winters's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/07/Form表单/" itemprop="url">Form表单</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-07T16:17:49+08:00">
-                2017-05-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HTML入门/" itemprop="url" rel="index">
-                    <span itemprop="name">HTML入门</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/05/07/Form表单/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/07/Form表单/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/05/07/Form表单/" class="leancloud_visitors" data-flag-title="Form表单">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="1-form表单有什么作用？有哪些常用的input标签，分别有什么作用？"><a href="#1-form表单有什么作用？有哪些常用的input标签，分别有什么作用？" class="headerlink" title="1. form表单有什么作用？有哪些常用的input标签，分别有什么作用？"></a>1. form表单有什么作用？有哪些常用的input标签，分别有什么作用？</h4><ul>
-<li>表单的作用是搜集用户的输入，用户提交表单时向服务器传输数据，从而实现用户与web服务器的交互。</li>
-<li>常用的input标签：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;input type=&quot;text&quot;&gt;:定义用于文本输入的单行输入字段（默认宽度为20个字符）</div><div class="line">&lt;input type=&quot;password&quot;&gt;:定义密码字段</div><div class="line">&lt;input type=&quot;radio&quot;&gt;:定义单选按钮，允许用户在有限数量的选项中选择一个</div><div class="line">&lt;input type=&quot;checkbox&quot;&gt;:定义复选框</div><div class="line">&lt;input type=&quot;submit&quot;&gt;:定义用于向表单处理程序提交表单的按钮。</div><div class="line">&lt;input type=&quot;button&quot;&gt;:定义按钮</div><div class="line">&lt;input type=&quot;number&quot;&gt;:用于应该包含数字值的输入字段</div><div class="line">&lt;input type=&quot;date&quot;&gt;:用于应该包含日期的输入字段</div><div class="line">&lt;input type=&quot;color&quot;&gt;:用于应该包含颜色的输入字段，根据浏览器支持，颜色选择器会出现输入字段中。</div><div class="line">&lt;input type=&quot;range&quot;&gt;:用于应该包含一定范围内的值的输入字段，根据浏览器支持，输入字段能够显示为滑动控件</div><div class="line">&lt;input type=&quot;month&quot;&gt;:允许用户选择月份和年份，根据浏览器的支持，日期选择器会出现在输入字段中</div><div class="line">&lt;input type=&quot;week&quot;&gt;:允许用户选择周和年,根据浏览器支持，日期选择器会出现输入字段中。</div><div class="line">&lt;input type=&quot;time&quot;&gt;:允许用户选择时间（无时区）,根据浏览器支持，时间选择器会出现输入字段中。</div><div class="line">&lt;input type=&quot;datetime&quot;&gt;:允许用户选择日期和时间（有时区）,根据浏览器支持，日期选择器会出现输入字段中。</div><div class="line">&lt;input type=&quot;datetime-local&quot;&gt;:允许用户选择日期和时间（无时区）,根据浏览器支持，日期选择器会出现输入字段中。</div><div class="line">&lt;input type=&quot;email&quot;&gt;:用于应该包含电子邮件地址的输入字段，根据浏览器支持，能够在被提交时自动对电子邮件地址进行验证。</div><div class="line">&lt;input type=&quot;search&quot;&gt;:用于搜索字段（搜索字段的表现类似常规文本字段）。</div><div class="line">&lt;input type=&quot;tel&quot;&gt;:用于应该包含电话号码的输入字段，目前只有Safari 8支持该类型</div><div class="line">&lt;input type=&quot;url&quot;&gt;:用于应该包含URL地址的输入字段，根据浏览器的支持，在提交时能够自动验证url字段。</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="2-post和get方式有什么区别"><a href="#2-post和get方式有什么区别" class="headerlink" title="2. post和get方式有什么区别"></a>2. post和get方式有什么区别</h4><ul>
-<li>get适用于非敏感数据的提交，post适用于敏感数据的提交</li>
-<li>当使用get方法时，表单数据在页面地址栏中是可见的；当使用post方法时，表单数据在页面地址栏中是不可见的。</li>
-<li>get适用于数据的查询和获取，post适用于数据的增加删除和修改</li>
-<li>get方法提交的数据最多只能是1024字节，理论上post没有限制，可传较大量的数据，IIS4中最大为80KB，IIS5中为100KB</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/07/Form表单/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/07/HTML基础/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Winters">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/image/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Winters's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/07/HTML基础/" itemprop="url">HTML基础</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-07T11:20:34+08:00">
-                2017-05-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HTML入门/" itemprop="url" rel="index">
-                    <span itemprop="name">HTML入门</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/05/07/HTML基础/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/07/HTML基础/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/05/07/HTML基础/" class="leancloud_visitors" data-flag-title="HTML基础">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="1-网页乱码的问题是如何产生的？怎样解决"><a href="#1-网页乱码的问题是如何产生的？怎样解决" class="headerlink" title="1. 网页乱码的问题是如何产生的？怎样解决"></a>1. 网页乱码的问题是如何产生的？怎样解决</h4><ul>
-<li>产生原因</li>
-</ul>
-<ol>
-<li>乱码通常在使用英文以外的字符才会出现</li>
-<li>编辑器保存的编码格式和浏览器解析时的解码格式不匹配</li>
-</ol>
-<ul>
-<li>解决方法<br>在html中明确编码格式，即在<code>&lt;head&gt;</code>中添加<br><code>&lt;meta charset=&quot;xxx&quot;&gt;</code>,向浏览器明确你所以使用的编码格式</li>
-</ul>
-<h4 id="2-颜色有几种写法，-红色、-绿色、蓝色、白色、黑色如何表示？-透明黑色如何表示？"><a href="#2-颜色有几种写法，-红色、-绿色、蓝色、白色、黑色如何表示？-透明黑色如何表示？" class="headerlink" title="2. 颜色有几种写法， 红色、 绿色、蓝色、白色、黑色如何表示？ 透明黑色如何表示？"></a>2. 颜色有几种写法， 红色、 绿色、蓝色、白色、黑色如何表示？ 透明黑色如何表示？</h4><ul>
-<li>第一种：使用颜色名来表示<br><code>red;green;blue;white;black</code></li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/07/HTML基础/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1388,7 +1635,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1399,7 +1646,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
